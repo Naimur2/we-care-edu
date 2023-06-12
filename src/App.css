@@ -1,0 +1,112 @@
+
+/* input[type="email"], input[type="submit"] {
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+   
+} */
+/* input[type="email"]{
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 25px; 
+    background-color: #fff;
+    height: 48px;
+    border: 1px solid #717171;
+    font-family: Plus Jakarta Sans;
+    font-size: 16;
+    color: #191919
+  }
+   */
+/* input[type="submit"] {
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px; 
+    background-color: #0090A6;
+    color: #FFFFFF;
+    margin-left: -15px;
+    border: none;
+    height: 48px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Plus Jakarta Sans;
+
+  } */
+  @import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+/* .slick-center{
+      box-shadow:  '0px 8px 56px rgba(0, 0, 0, 0.08)';
+      background-color: #fff;
+      border-radius: 16px;
+      border: none;
+      color: #0090A6
+} */
+ /* the slides */
+ /* .slick-slide {
+    padding: 0 10px;
+
+} */
+
+/* the parent */
+/* .slick-list {
+    padding: 0 -10px;
+
+} */
+.css-12tl3rr-MuiInputBase-input-MuiOutlinedInput-input{
+    color:#8E8E8E !important
+}
+.container {
+    width:100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+    input[type="email"]{
+        width: 20rem;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+.react-tel-input .selected-flag:hover{
+    background: transparent !important;
+}
+@media screen and (max-width: 768px) {
+    input[type="email"]{
+        width: 50%;
+        font-size: 14px;
+    }
+    input[type="submit"] {
+        width: 50%;
+        font-size: 14px;
+        margin-left: -15px;
+
+    }
+}
