@@ -14,24 +14,29 @@ import StudyInSouthKorea from "../components/studyInSouthKorea/StudyInSouthKorea
 import WorkingUniversities from "../components/workingUniversities/WorkingUniversities";
 import Photos from "../components/photos/Photos";
 import Testimonial from "../components/testimonial/Testimonial";
+import HeroCarousel from "../components/heroCarousel/HeroCarousel";
+import AdvisorCard from "../components/AdvisorCard/AdvisorCard";
+import Advisor from "../components/Advisor/Advisor";
 
 export default function HomePage() {
-    return (
-        <Stack>
-            <Navbar />
-            <HeroSection />
-            <OurServices />
-            <FindProgram />
-            <WorkingUniversities />
-            <StudyInSouthKorea />
-            <Testimonial />
-            <History />
-            <Photos />
-            <Gallery />
-            <AboutUs />
-            <Faq />
-            <ContactUs />
-            <Footer />
-        </Stack>
-    );
+  return (
+    <Stack>
+      <Navbar />
+      {/* <HeroSection /> */}
+      <HeroCarousel />
+      <OurServices />
+      <FindProgram />
+      <WorkingUniversities />
+      <StudyInSouthKorea />
+      <Testimonial />
+      <History />
+      <Photos />
+      <Gallery />
+      <AboutUs />
+      <Faq />
+      <ContactUs />
+      <Advisor/>
+      <Footer />
+    </Stack>
+  );
 }
