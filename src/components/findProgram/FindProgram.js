@@ -5,9 +5,34 @@ import fingirPrint from '../../assets/images/fingirPrint.svg';
 import line from '../../assets/images/line.svg';
 import { CTypography } from "../../utility";
 const programs = [
-    "Business", "Economics", "Education", "Global Studies", "Engineering",
-    "Graphic Design & Web Developments", "Media Communication",
-    "Health Sciences", "Information/Computter Science", "Sustainability"
+    "Global Business Administration", "Global Hospitality Management", "Global Business Administration", "Global Mechanical Design Engineering", "Global IT Engineering",
+    "Global Business Studies", "Integrated Business Administration",
+    "Tourism Management", "English Language & Literature", "Public Administration",
+    "Tourism Management","Mathematics","Fashion & Textiles","Physical education",
+    "Architectural Engineering","Civil Engineering","Electronic Engineering","Urban Planning & Landscape",
+    "Computer Engineering","Naval Architecture and Offshore Engineering","ICT Integrated Ocean Smart Cities Engineering",
+    "International Studies","International Engineering and Science","English Education",
+    "Electronic Information Materials Engineering",
+    "Nano Convergence Engineering",
+    "Global Business",
+    "Computer Science & Engineering",
+    "Information Security",
+    "Global Business Administration",
+    "Global Media and Communication Program",
+    "Global Economics",
+    "Global Business Administration",
+    "Global Hospitality & Tourism Management",
+    "Computer Engineering",
+    "Global Applied Music",
+    "Business Administration",
+    "Computer Science and Engineering",
+    "Artificial Intelligence Programming",
+    "Architecture Engineering",
+    "Civil and Environment Engineering",
+    "Nanotechnology and Advanced Engineering",
+    "Hospitality Management",
+    "Computer Science Engineering",
+    "Hospitality Management"
 ]
 export default function FindProgram() {
     const { isDarkMode } = useSelector(state => state.darkMode);
@@ -77,8 +102,8 @@ export default function FindProgram() {
                             sm: 0
                         }}
                     >
-                        WeCare Education offers a comprehensive range of services, from admissions support <br /> to visa assistance, to ensure a smooth and stress-free application <br />
-                        process for our students.
+                        WeCare Education offers a comprehensive range of services, from admissions support to visa assistance, to ensure a smooth and stress-free application
+ process for our students.
                     </CTypography>
                     <Box
                         sx={{

@@ -11,6 +11,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function ContactUs() {
     const { isDarkMode } = useSelector((state) => state.darkMode);
+
     return (
         <Stack
             bgcolor={isDarkMode ? "#141414" : "#F3FCFD"}

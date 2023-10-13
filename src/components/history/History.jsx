@@ -65,6 +65,7 @@ export default function History() {
                         position: "relative",
                         zIndex: 1,
                         overflow: "hidden",
+                        width: "100%",
                     }}
                 >
                     <Stack
@@ -169,11 +170,15 @@ export default function History() {
 
                     <Stack
                         sx={{
-                            display: "grid",
-                            gridTemplateColumns: {
-                                md: "repeat(4, 1fr)",
-                                xs: "1fr",
-                            },
+                            // display: "grid",
+                            // gridTemplateColumns: {
+                            //     md: "repeat(4, 1fr)",
+                            //     xs: "1fr",
+                            // },
+                            // placeItems: "center",
+                            display: "flex",
+                            justifyContent: "center",
+                            width: "100%",
                         }}
                         width={"100%"}
                         // bgcolor={'#f00'}
@@ -181,7 +186,7 @@ export default function History() {
                         // justifyContent={'center'}
                         // alignItems={'center'}
                     >
-                        <Stack
+                        {/* <Stack
                             width={"100%"}
                             height={"100%"}
                             alignItems={"center"}
@@ -287,8 +292,8 @@ export default function History() {
                                     pt={2}
                                 />
                             </Box>
-                        </Stack>
-                        <Stack
+                        </Stack> */}
+                        {/* <Stack
                             width={"100%"}
                             height={"100%"}
                             alignItems={"center"}
@@ -340,7 +345,7 @@ export default function History() {
                                     pt={2}
                                 />
                             </Box>
-                        </Stack>
+                        </Stack> */}
 
                         <Stack
                             width={"100%"}

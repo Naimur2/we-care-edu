@@ -6,23 +6,23 @@ import { CButton, CTypography } from "../../utility";
 const video = [
     {
         id: 1,
-        title: 'Best Education System',
-        url: 'https://www.youtube.com/embed/tgbNymZ7vqY'
+        title: 'Inspiring Story! Meet Amin, Student at Kyungsung ',
+        url: 'https://www.youtube.com/embed/DYLn9oKYW2E'
     },
     {
         id: 2,
-        title: 'Best Education System',
-        url: 'https://www.youtube.com/embed/tgbNymZ7vqY'
+        title:  `Unlocking Success: Milen Haque's Journey `,
+        url: 'https://www.youtube.com/embed/KyewYMewEC4?si=gv3dnOxz6CPONlb1'
     },
     {
         id: 3,
-        title: 'Best Education System',
-        url: 'https://www.youtube.com/embed/tgbNymZ7vqY'
+        title: `Exploring South Korea's Job Market for Students`,
+        url: 'https://www.youtube.com/embed/gmLpa91md7Q?si=1O2wh7B5Mol4QBjq'
     },
     {
         id: 4,
-        title: 'Best Education System',
-        url: 'https://www.youtube.com/embed/tgbNymZ7vqY'
+        title: 'Unlocking Success at Kyungsung University',
+        url: 'https://www.youtube.com/embed/jPtzUKmqiBk'
     }
 ]
 export default function Gallery() {

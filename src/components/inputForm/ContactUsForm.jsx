@@ -4,16 +4,26 @@ import "./ContactUs.css";
 import telephone from "../../assets/svg/telephone.svg";
 import sms from "../../assets/svg/sms.svg";
 import building from "../../assets/svg/bulding.svg";
+import { useSelector } from "react-redux";
 
 const ContactUsCard = ({ title, description1, description2, icon }) => {
+    const { isDarkMode } = useSelector((state) => state.darkMode);
     return (
         <div className="contact-us-card">
             <div className="contact-us-card__icon">
                 <img src={icon} alt="" />
             </div>
             <div className="contact-us-card__details">
-                <h1 className="contact-us-card__title">{title}</h1>
-                <div className="contact-us-card__description">
+                <h1
+                    className="contact-us-card__title"
+                    style={{ color: isDarkMode ? "white" : "black" }}
+                >
+                    {title}
+                </h1>
+                <div
+                    className="contact-us-card__description"
+                    style={{ color: isDarkMode ? "white" : "black" }}
+                >
                     <p>{description1}</p>
                     {description2 && <p>{description2}</p>}
                 </div>
