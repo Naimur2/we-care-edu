@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useSelector } from "react-redux";
 
 const AdvisorCard = ({
   name = "Saadat Mahboob",
@@ -8,6 +9,8 @@ const AdvisorCard = ({
   whatsapp = "",
   description = ``,
 }) => {
+  const { isDarkMode } = useSelector((state) => state.darkMode);
+
   return (
     <Box
       sx={{
@@ -22,7 +25,7 @@ const AdvisorCard = ({
           width: "100%",
           borderRadius: "10px",
           boxShadow: "0px 8px 56px 0px rgba(0, 0, 0, 0.08)",
-          backgroundColor: "white",
+          backgroundColor: isDarkMode ? "#0D0D0D" : "#fff",
           height: "100%",
           minHeight: "20rem",
         }}
@@ -43,6 +46,7 @@ const AdvisorCard = ({
                 fontSize: "24px",
                 fontWeight: 600,
                 lineHeight: "normal",
+                color: isDarkMode ? "#868686" : "#535353" 
               }}
             >
               {name}
@@ -104,7 +108,11 @@ const AdvisorCard = ({
           </Box>
         </Box>
 
-        <Typography sx={{ marginTop: "24px" }}>{description}</Typography>
+        <Typography
+          sx={{ marginTop: "24px", color: isDarkMode ? "#868686" : "#535353" }}
+        >
+          {description}
+        </Typography>
       </Box>
     </Box>
   );
