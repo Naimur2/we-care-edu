@@ -52,12 +52,12 @@
 
 } */
 .css-12tl3rr-MuiInputBase-input-MuiOutlinedInput-input {
-  color: #8e8e8e !important;
+    color: #8e8e8e !important;
 }
 .container {
-  width: 100%;
-  padding: 0 1rem;
-  margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
 }
 
 .carousel .thumb img {
@@ -71,50 +71,57 @@
 }
 
 @media screen and (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
+    .container {
+        max-width: 640px;
+    }
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 2rem;
-  }
+    .container {
+        max-width: 768px;
+        padding: 0 2rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-  input[type="email"] {
-    width: 20rem;
-    font-size: 14px;
-  }
+    .container {
+        max-width: 1024px;
+    }
+    input[type="email"] {
+        width: 20rem;
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
+    .container {
+        max-width: 1280px;
+    }
 }
 
 @media screen and (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
+    .container {
+        max-width: 1536px;
+    }
 }
 .react-tel-input .selected-flag:hover {
-  background: transparent !important;
+    background: transparent !important;
 }
 @media screen and (max-width: 768px) {
-  input[type="email"] {
-    width: 50%;
-    font-size: 14px;
-  }
-  input[type="submit"] {
-    width: 50%;
-    font-size: 14px;
-    margin-left: -15px;
-  }
+    input[type="email"] {
+        width: 50%;
+        font-size: 14px;
+    }
+    input[type="submit"] {
+        width: 50%;
+        font-size: 14px;
+        margin-left: -15px;
+    }
+}
+
+.line-clamp-5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
