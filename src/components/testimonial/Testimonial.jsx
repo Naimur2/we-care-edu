@@ -14,31 +14,31 @@ const testimonial = [
     {
         id: 1,
         name: "Asha Sarker",
-        image: "/images/advisor/Picture1.jpg",
+        image: "/images/testimonial/Picture1.jpg",
         quote: `I am Asha Sarker. I recently got my Visa Approval for South Korea. Throughout the whole procedure WeCare Education helped me a lot. The student Counselors are super friendly . When I had some inquiry they helped me in a really friendly manner... It was a pleasant experience for me with WeCare Education. The adoration I got from Iftekhar Bhai is beyond expectation. Thank you WeCare Education for making my journey easier. `,
     },
     {
         id: 2,
         name: "Chinmoy Dash Rahul",
-        image: "/images/advisor/Picture2.jpg",
+        image: "/images/testimonial/Picture2.jpg",
         quote: `Many many thanks to WeCare Education❤️❤️ They really care about their students. They help their students to provide all the needed documents. Beside that they have hired some lovely people as student counselors. I think I have made the best decision by choosing WeCare Education. I will suggest every student who is planning to study in South Korea to choose "WeCare Education" because I think it is the best that you can get here❤️❤️ `,
     },
     {
         id: 3,
         name: "Alveer Hasan Abir",
-        image: "/images/advisor/Picture3.jpg",
+        image: "/images/testimonial/Picture3.jpg",
         quote: `I am incredibly grateful and happy with the exceptional service provided by "Wecare Education"! They are a fantastic student consultancy that helped me secure my student visa for South Korea. Throughout the process, they were attentive, supportive, and guided me step-by-step, making it all stress-free. Thanks to their expertise and dedication. I wholeheartedly recommend "Wecare Education" to any student seeking assistance with studying abroad. They truly care about their clients and go above and beyond to make dreams come true! `,
     },
     {
         id: 4,
         name: "Tarekul Islam Monna",
-        image: "/images/advisor/Picture4.jpg",
+        image: "/images/testimonial/Picture4.jpg",
         quote: `Alhamdulillah by the grace of Allah I got my Korean student visa.WeCare Education made my journey easier. They were all friendly and available at any time. Undoubtedly it can be said that WeCare Education is the best when it comes to Korean student visa. From my application till now I am receiving all kinds of support from WeCare Education. Thanks to my counselor Md Aashik bhai Grateful to Md Iftekhar Rahman bhai(CEO of WeCare Education). `,
     },
     {
         id: 5,
         name: " Masuduzzaman Kamrul",
-        image: "/images/advisor/Picture5.jpg",
+        image: "/images/testimonial/Picture5.jpg",
         quote: `I am grateful to Wecare Education. My journey was a bit complicated but they made it easy. Their commitment and service is excellent. Special thanks to Md Ifthekar Rahman bhaiya and Ritu Apu. They helped me a lot throughout my journey. ❤️ in terms of higher study in Korea, Wecare is the best. I wish all the best to the whole wecare family. `,
     },
 ];
