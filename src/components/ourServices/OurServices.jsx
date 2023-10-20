@@ -178,7 +178,7 @@ export default function OurServices() {
             gap: "1.5rem",
           }}
         >
-          {services.slice(0, dataCount).map((item, index) => (
+          {services?.slice(0, dataCount)?.map((item, index) => (
             <div
               className=""
               key={item.id}
