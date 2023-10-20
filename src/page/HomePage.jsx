@@ -17,6 +17,7 @@ import Testimonial from "../components/testimonial/Testimonial";
 import HeroCarousel from "../components/heroCarousel/HeroCarousel";
 import AdvisorCard from "../components/AdvisorCard/AdvisorCard";
 import Advisor from "../components/Advisor/Advisor";
+import CEOStatement from "../components/ceo-statement/CEOStatement";
 
 export default function HomePage() {
   return (
@@ -27,6 +28,7 @@ export default function HomePage() {
       <OurServices />
       <FindProgram />
       <WorkingUniversities />
+      <CEOStatement/>
       <StudyInSouthKorea />
       <Testimonial />
       <History />
