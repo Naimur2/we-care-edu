@@ -8,11 +8,12 @@ import Service3 from "../../assets/svg/Service3";
 import Service4 from "../../assets/svg/Service4";
 import Service5 from "../../assets/svg/Service5";
 import Service6 from "../../assets/svg/Service6";
-import { CTypography } from "../../utility";
+import { CButton, CTypography } from "../../utility";
 
 export default function OurServices() {
   const { isDarkMode } = useSelector((state) => state.darkMode);
   const [seletedService, setSeletedService] = React.useState(0);
+  const [dataCount, setDataCount] = React.useState(6);
   const services = [
     {
       id: 1,
@@ -95,6 +96,22 @@ export default function OurServices() {
       icon: "/images/icon/services/16.svg",
     },
   ];
+
+  const handleSeeMoreOrLess = () => {
+    if (services?.length !== dataCount) {
+      setDataCount((prev) => {
+        if (prev + 6 <= services?.length) {
+          return prev + 6;
+        } else if (prev + 6 >= services?.length) {
+          return services?.length;
+        }
+        return prev;
+      });
+    } else {
+      setDataCount(6);
+    }
+  };
+
   return (
     <Stack
       component={"section"}
@@ -161,7 +178,7 @@ export default function OurServices() {
             gap: "1.5rem",
           }}
         >
-          {services.map((item, index) => (
+          {services.slice(0, dataCount).map((item, index) => (
             <div
               className=""
               key={item.id}
@@ -242,6 +259,17 @@ export default function OurServices() {
               </Stack>
             </div>
           ))}
+        </Stack>
+
+        <Stack pt={2}>
+          <CButton
+            onClick={handleSeeMoreOrLess}
+            btnTitle={services?.length !== dataCount ? "See More" : "See Less"}
+            fontSize={{
+              md: 20,
+              xs: 16,
+            }}
+          />
         </Stack>
       </Stack>
 
