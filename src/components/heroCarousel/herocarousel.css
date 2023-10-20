@@ -1,4 +1,4 @@
-.carousalItemDiv {
+.carousalItemDivView {
     /* From https://css.glass */
     width: 100%;
     height: 100%;
@@ -12,12 +12,12 @@
     position: relative;
     z-index: 100;
 }
-.carousalItemImg {
+.carousalItemImgView {
     object-fit: contain;
     z-index: 0;
 }
 
-.blur {
+.blur-view {
     width: 100%;
     height: 100%;
 

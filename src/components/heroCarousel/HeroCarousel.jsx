@@ -56,15 +56,15 @@ const HeroCarousel = () => {
                 {carousalItems?.map(({ url }, idx) => (
                     <div
                         key={idx.toString() + url}
-                        className="carousalItemDiv"
+                        className="carousalItemDivView"
                         style={{
                             backgroundImage: `url(${url})`,
                         }}
                     >
                         {" "}
-                        <div className="blur"></div>
+                        <div className="blur-view"></div>
                         <img
-                            className="carousalItemImg"
+                            className="carousalItemImgView"
                             src={url}
                             alt={`heroCarousel-${idx}`}
                         />
