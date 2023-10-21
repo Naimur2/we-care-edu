@@ -229,7 +229,7 @@ export default function FindProgram() {
                         padding: "12px 0 0 0",
                     }}
                 >
-                    <Stack pt={2}>
+                    <Stack pt={4}>
                         <CButton
                             onClick={handleSeeMoreOrLess}
                             btnTitle={
