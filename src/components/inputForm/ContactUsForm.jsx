@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import React from "react";
 import "./ContactUs.css";
 import telephone from "../../assets/svg/telephone.svg";
@@ -9,26 +9,101 @@ import { useSelector } from "react-redux";
 const ContactUsCard = ({ title, description1, description2, icon }) => {
     const { isDarkMode } = useSelector((state) => state.darkMode);
     return (
-        <div className="contact-us-card">
-            <div className="contact-us-card__icon">
-                <img src={icon} alt="" />
-            </div>
-            <div className="contact-us-card__details">
-                <h1
+        <Box
+            className="contact-us-card"
+            sx={{
+                gap: {
+                    xs: "1rem",
+                    md: "2rem",
+                },
+            }}
+        >
+            <Box
+                className="contact-us-card__icon"
+                sx={{
+                    height: {
+                        xs: "3.5rem",
+                        md: "4rem",
+                    },
+                    width: {
+                        xs: "3.5rem",
+                        md: "4rem",
+                    },
+                }}
+            >
+                <Box
+                    src={icon}
+                    alt=""
+                    sx={{
+                        width: {
+                            xs: "1.5rem",
+                            md: "2rem",
+                        },
+                        height: {
+                            xs: "1.5rem",
+                            md: "2rem",
+                        },
+                        objectFit: "contain",
+                        color: isDarkMode ? "white" : "black",
+                    }}
+                    component={"img"}
+                />
+            </Box>
+            <Box
+                className="contact-us-card__details"
+                sx={{
+                    gap: {
+                        xs: "0.5rem",
+                        md: "1rem",
+                    },
+                }}
+            >
+                <Box
                     className="contact-us-card__title"
-                    style={{ color: isDarkMode ? "white" : "black" }}
+                    sx={{
+                        color: isDarkMode ? "white" : "black",
+                        fontSize: {
+                            xs: "1.2rem",
+                            md: "1.5rem",
+                        },
+                    }}
+                    component={"h2"}
                 >
                     {title}
-                </h1>
+                </Box>
                 <div
                     className="contact-us-card__description"
                     style={{ color: isDarkMode ? "white" : "black" }}
                 >
-                    <p>{description1}</p>
-                    {description2 && <p>{description2}</p>}
+                    <Box
+                        component={"p"}
+                        sx={{
+                            maxWidth: "70ch",
+                            fontSize: {
+                                xs: "0.85rem",
+                                md: "1.2rem",
+                            },
+                        }}
+                    >
+                        {description1}
+                    </Box>
+                    {description2 && (
+                        <Box
+                            component={"p"}
+                            sx={{
+                                maxWidth: "70ch",
+                                fontSize: {
+                                    xs: "0.85rem",
+                                    md: "1.2rem",
+                                },
+                            }}
+                        >
+                            {description2}
+                        </Box>
+                    )}
                 </div>
-            </div>
-        </div>
+            </Box>
+        </Box>
     );
 };
 
@@ -46,8 +121,8 @@ const data = [
     },
     {
         title: "Dhaka Office:",
-        description1: "House- 54/A, Road-133, Room no: 302,",
-        description2: "Gulshan-1,  Dhaka-1212.",
+        description1: "Tropical Manco Tower (3rd Floor), T-111, T-112",
+        description2: "Gulshan Badda Link Road, Dhaka-1212",
         icon: building,
     },
     {

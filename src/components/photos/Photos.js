@@ -206,7 +206,7 @@ export default function Photos() {
                                         xs: 368
                                     },
                                     height: {
-                                        md: 348,
+                                        md: 400,
                                         xs: 276
                                     },
                                     borderRadius: '16px',
@@ -229,6 +229,11 @@ export default function Photos() {
                                         src={photo.image}
                                         width={'100%'}
                                         height={'100%'}
+                                        style={{
+                                            objectFit: 'cover',
+                                            borderRadius: 10,
+                                            overflow: 'hidden',
+                                        }}
 
                                     />
                                 </Box>
@@ -255,10 +260,11 @@ export default function Photos() {
                             alignItems: 'center',
                             justifyContent: 'center',
                             display: 'flex',
+                         
+                            
                             '&:hover': {
                                 cursor: 'pointer',
                                 bgcolor: '#0090A690',
-
                             },
                         }}
                     >
