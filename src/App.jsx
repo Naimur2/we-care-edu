@@ -21,7 +21,7 @@ function App() {
             duration: 1000,
             disable: () => window.innerWidth < 1024,
         });
-    }, [currentWindowWidth]);
+    }, []);
 
     React.useEffect(() => {
         const handleResize = () => {
@@ -72,5 +72,3 @@ function App() {
 }
 
 export default App;
-
-
