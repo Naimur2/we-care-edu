@@ -158,6 +158,10 @@ export default function Footer() {
                                 md: 20,
                                 xs: 16,
                             }}
+                            textAlign={{
+                                xs: "center",
+                                md: "left",
+                            }}
                             fontWeight={400}
                             text={`${currentYear} WeCare Education, Inc. All rights reserved.`}
                         />

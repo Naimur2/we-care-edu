@@ -315,7 +315,7 @@ export default function Testimonial() {
                         md: 80,
                         xs: 50,
                       },
-                      borderRadius: "50%",
+                      borderRadius: "100%",
                       overflow: "hidden",
                       //   objectFit: 'cover',
                       // objectPosition: 'center',
@@ -327,6 +327,13 @@ export default function Testimonial() {
                       src={item.image}
                       width={"100%"}
                       height={"100%"}
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "center",
+                        height: "100%",
+                        width: "100%",
+                        
+                      }}
                     />
                   </Box>
                   <Box>

@@ -1,6 +1,6 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Box } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
-import { Box, Link } from "@mui/material";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import ContainedButtons from "../../utility/CButton";
 import "./herocarousel.css";
 
@@ -52,6 +52,7 @@ const HeroCarousel = () => {
                 infiniteLoop
                 autoPlay
                 showThumbs={false}
+                swipeable={false}
             >
                 {carousalItems?.map(({ url }, idx) => (
                     <div

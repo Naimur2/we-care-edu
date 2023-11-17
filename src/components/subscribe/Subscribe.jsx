@@ -107,7 +107,7 @@ export default function Subscribe({ isDarkMode }) {
                         color={isDarkMode ? "#fff" : "#181818"}
                         fontSize={{
                             md: 36,
-                            xs: 24,
+                            xs: 18,
                         }}
                         fontWeight={700}
                         align={"center"}
