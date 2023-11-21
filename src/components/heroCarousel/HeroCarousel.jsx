@@ -3,95 +3,66 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import ContainedButtons from "../../utility/CButton";
 import "./herocarousel.css";
-
-const carousalItems = [
-    {
-        url: "/images/heroCarousal/Picture1.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture2.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture3.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture4.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture5.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture6.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture7.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture8.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture9.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture10.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture11.jpg",
-    },
-    {
-        url: "/images/heroCarousal/Picture12.jpg",
-    },
-];
+import images from "./images.json";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeroCarousel = () => {
-    return (
-        <div style={{ position: "relative" }}>
-            <Carousel
-                showArrows={false}
-                // stopOnHover
-                infiniteLoop
-                autoPlay
-                showThumbs={false}
-                swipeable={false}
+  return (
+    <div style={{ position: "relative" }}>
+      <Carousel
+        showArrows={false}
+        // stopOnHover
+        infiniteLoop
+        autoPlay
+        showThumbs={false}
+        swipeable={false}
+      >
+        {images?.map(({ url, size, srcset,si }, idx) => {
+          const imageBaseUrl = "/images/carousel/" + (si) + "/";
+          const backgroundUrl = imageBaseUrl + url;
+          const srcsetUrls = srcset.map((src) => imageBaseUrl + src);
+          return (
+            <div
+              key={idx.toString() + url}
+              className="carousalItemDivView"
+              style={{
+                backgroundImage: `url(${backgroundUrl})`,
+              }}
             >
-                {carousalItems?.map(({ url }, idx) => (
-                    <div
-                        key={idx.toString() + url}
-                        className="carousalItemDivView"
-                        style={{
-                            backgroundImage: `url(${url})`,
-                        }}
-                    >
-                        {" "}
-                        <div className="blur-view"></div>
-                        <img
-                            className="carousalItemImgView"
-                            src={url}
-                            alt={`heroCarousel-${idx}`}
-                        />
-                    </div>
-                ))}
-            </Carousel>
+              {" "}
+              <div className="blur-view"></div>
+              <LazyLoadImage
+                className="carousalItemImgView"
+                src={backgroundUrl}
+                alt={`heroCarousel-${idx}`}
+                srcSet={srcsetUrls.join(", ")}
+                sizes={size}
+                effect="blur"
+              />
+            </div>
+          );
+        })}
+      </Carousel>
 
-            <Box
-                sx={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    paddingBlock: "3rem",
-                }}
-            >
-                {/* <button type="button">Button</button> */}
-                <ContainedButtons href="http://54.164.51.55/" target="_blank">
-                    Book an Appointment
-                </ContainedButtons>
-            </Box>
-        </div>
-    );
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          paddingBlock: "3rem",
+        }}
+      >
+        {/* <button type="button">Button</button> */}
+        <ContainedButtons href="http://54.164.51.55/" target="_blank">
+          Book an Appointment
+        </ContainedButtons>
+      </Box>
+    </div>
+  );
 };
 
 export default HeroCarousel;

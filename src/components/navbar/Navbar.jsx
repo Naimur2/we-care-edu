@@ -166,7 +166,7 @@ export default function Navbar() {
                 lg: 16,
               }}
               padding={"0.5rem 2rem"}
-              href="http://54.164.51.55/"
+              href={process.env.REACT_APP_DASHBOARD_URL}
               target="_blank"
             />
           </Stack>
@@ -274,7 +274,7 @@ export default function Navbar() {
                   md: 14,
                   lg: 16,
                 }}
-                href="http://54.164.51.55/"
+                href={process.env.REACT_APP_DASHBOARD_URL}
                 target="_blank"
               />
             </Box>

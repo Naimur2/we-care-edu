@@ -3,32 +3,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import line from "../../assets/images/line.svg";
 import { CButton, CTypography } from "../../utility";
-import useGetCategories from "../../hooks/useGetCategories";
-import useGetVideos from "../../hooks/useGetVideos";
 import { useQuery } from "react-query";
 import { getCategories, getVideos } from "../../api/videos";
-const video = [
-  {
-    id: 1,
-    title: "Inspiring Story! Meet Amin, Student at Kyungsung ",
-    url: "https://www.youtube.com/embed/DYLn9oKYW2E",
-  },
-  {
-    id: 2,
-    title: `Unlocking Success: Milen Haque's Journey `,
-    url: "https://www.youtube.com/embed/KyewYMewEC4?si=gv3dnOxz6CPONlb1",
-  },
-  {
-    id: 3,
-    title: `Exploring South Korea's Job Market for Students`,
-    url: "https://www.youtube.com/embed/gmLpa91md7Q?si=1O2wh7B5Mol4QBjq",
-  },
-  {
-    id: 4,
-    title: "Unlocking Success at Kyungsung University",
-    url: "https://www.youtube.com/embed/jPtzUKmqiBk",
-  },
-];
+
 export default function Gallery() {
   const [category, setCategory] = React.useState(undefined);
   const { isDarkMode } = useSelector((state) => state.darkMode);
