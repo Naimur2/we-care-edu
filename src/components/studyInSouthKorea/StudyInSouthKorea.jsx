@@ -129,20 +129,14 @@ export default function StudyInSouthKorea() {
                 // component={'img'}
                 // src={study}
                 sx={{
-                  width: {
-                    lg: 524,
-                    xs: 345,
-                  },
-                  height: {
-                    lg: 476,
-                    xs: 313,
-                  },
                   borderRadius: "16px",
                   overflow: "hidden",
                 }}
+                className="w-full max-w-lg"
+
                 // alt='study'
               >
-                <LazyLoadImage
+                <img
                   alt={"study"}
                   effect="blur"
                   src={study}
@@ -255,7 +249,9 @@ export default function StudyInSouthKorea() {
               md: "flex-start",
             }}
           >
-            <Stack spacing={2}>
+            <Stack spacing={2}
+            className="max-w-2xl mx-auto"
+            >
               {studyData.map((item, index) => {
                 return (
                   <Stack
@@ -298,8 +294,10 @@ export default function StudyInSouthKorea() {
                     <CTypography
                       color={isDarkMode ? "#fff" : "#181818"}
                       fontSize={{
-                        md: 32,
-                        xs: 20,
+                        xl: 32,
+                        lg: 28,
+                        md: 24,
+                        xs: 16,
                       }}
                       fontWeight={500}
                       text={item.title}

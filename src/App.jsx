@@ -22,7 +22,7 @@ function App() {
   React.useEffect(() => {
     AOS.init({
       duration: 1000,
-      disable: () => window.innerWidth < 1024,
+      disable: "tablet",
     });
   }, []);
 
@@ -42,7 +42,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Stack component={"main"} bgcolor={isDarkMode ? "#0D0D0D" : "#fff"}>
         <HomePage />
-        <MessengerChat
+        {/* <MessengerChat
           pageId="109268111769502"
           appId="109268111769502"
           language="sv_SE"
@@ -70,7 +70,7 @@ function App() {
           onMessengerLoad={() => {
             console.log("onMessengerLoad");
           }}
-        />
+        /> */}
       </Stack>
     </QueryClientProvider>
   );

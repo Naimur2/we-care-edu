@@ -321,7 +321,7 @@ export default function Testimonial() {
                       // objectPosition: 'center',
                     }}
                   >
-                    <LazyLoadImage
+                    <img
                       alt={item.name}
                       effect="blur"
                       src={item.image}

@@ -31,7 +31,7 @@ const AdvisorCard = ({
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <LazyLoadImage
+          <img
             src={advisorImageUrl}
             alt={"advisor"}
             effect="blur"
@@ -73,7 +73,7 @@ const AdvisorCard = ({
                 component={"a"}
                 target="_blank"
               >
-                <LazyLoadImage
+                <img
                   src={"/images/icon/facebook_icon.svg"}
                   alt={"advisor"}
                   effect="blur"
@@ -96,7 +96,7 @@ const AdvisorCard = ({
                 component={"a"}
                 target="_blank"
               >
-                <LazyLoadImage
+                <img
                   src={"/images/icon/viber_icon.svg"}
                   alt={"advisor"}
                   effect="blur"

@@ -17,10 +17,14 @@ const HeroCarousel = () => {
         showThumbs={false}
         swipeable={false}
       >
-        {images?.map(({ url, size, srcset,si }, idx) => {
-          const imageBaseUrl = "/images/carousel/" + (si) + "/";
+        {images?.map(({ url, size, srcset, si }, idx) => {
+          const imageBaseUrl = "/images/carousel/" + si + "/";
           const backgroundUrl = imageBaseUrl + url;
-          const srcsetUrls = srcset.map((src) => imageBaseUrl + src);
+
+          const srcsetUrls = srcset.map((src) => {
+            const width = src.split("w_")[1].split(".")[0];
+            return imageBaseUrl + src + " " + width + "w";
+          });
           return (
             <div
               key={idx.toString() + url}
@@ -31,13 +35,12 @@ const HeroCarousel = () => {
             >
               {" "}
               <div className="blur-view"></div>
-              <LazyLoadImage
+              <img
                 className="carousalItemImgView"
                 src={backgroundUrl}
                 alt={`heroCarousel-${idx}`}
                 srcSet={srcsetUrls.join(", ")}
                 sizes={size}
-                effect="blur"
               />
             </div>
           );

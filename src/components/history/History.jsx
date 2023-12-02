@@ -6,6 +6,8 @@ import flag1 from "../../assets/images/flag1.png";
 import flag2 from "../../assets/images/flag2.png";
 import flag3 from "../../assets/images/flag3.png";
 import flag4 from "../../assets/images/flag4.png";
+import flag5 from "../../assets/images/flag5.svg";
+import flag6 from "../../assets/images/flag6.svg";
 import line from "../../assets/images/line.svg";
 import { CTypography } from "../../utility";
 
@@ -30,6 +32,16 @@ const countries = [
         id: 4,
         name: "Nepal",
         image: flag4,
+    },
+    {
+        id: 5,
+        name: "Pakistan",
+        image: flag5,
+    },
+    {
+        id: 6,
+        name: "Uzbekistan",
+        image: flag6,
     },
 ];
 

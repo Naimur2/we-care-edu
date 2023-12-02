@@ -25,7 +25,6 @@ export default function Gallery() {
   const color = !isDarkMode ? "#fff" : "#181818";
   const hoverBackgroundColor = isDarkMode ? "#00A6C0" : "#0090C0";
 
-  console.log("videos", videos);
 
   const handleSeeMore = () => {
     if (videos?.meta?.page < videos?.meta?.totalPages) {
@@ -159,9 +158,7 @@ export default function Gallery() {
                   alignItems: "center",
                 }}
                 gap={"2rem"}
-                data-aos="fade-up"
-                data-aos-anchor-placement="center-bottom"
-                data-aos-delay={index * 100}
+                
               >
                 <Box
                   key={item.id}

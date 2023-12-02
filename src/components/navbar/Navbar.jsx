@@ -19,11 +19,6 @@ const menu = [
     link: "#online-advisors",
   },
   {
-    id: 3,
-    name: "Schedule",
-    link: "#schedule",
-  },
-  {
     id: 4,
     name: "Contact",
     link: "#contact",

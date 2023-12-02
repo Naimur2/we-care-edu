@@ -13,7 +13,7 @@ const CEOStatement = () => {
       }}
     >
       {/* <img style={{width: "100%"}} src={"/images/ceo_statement/banner.svg"} alt="ceo-statement" /> */}
-      <LazyLoadImage
+      <img
         src={"/images/ceo_statement/banner.svg"}
         alt="ceo-statement"
         effect="blur"
