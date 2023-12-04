@@ -5,8 +5,10 @@ import ContainedButtons from "../../utility/CButton";
 import "./herocarousel.css";
 import images from "./images.json";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import useModal from "../../modal/hook/useModal";
 
 const HeroCarousel = () => {
+  const { openModal } = useModal();
   return (
     <div style={{ position: "relative" }}>
       <Carousel
@@ -60,7 +62,7 @@ const HeroCarousel = () => {
         }}
       >
         {/* <button type="button">Button</button> */}
-        <ContainedButtons href="http://54.164.51.55/" target="_blank">
+        <ContainedButtons onClick={() => openModal("PersonalInfo")}>
           Book an Appointment
         </ContainedButtons>
       </Box>

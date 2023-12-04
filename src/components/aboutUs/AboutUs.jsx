@@ -65,7 +65,7 @@ export default function AboutUs() {
                 xs: 24,
               }}
               fontWeight={700}
-              text="About Us "
+              text="Free virtual counselling "
               align={"center"}
             />
             <Box
@@ -85,6 +85,7 @@ export default function AboutUs() {
                   xs: 6,
                 },
               }}
+              marginLeft={"auto"}
             />
           </Box>
         </Stack>
@@ -105,7 +106,9 @@ export default function AboutUs() {
               alignItems={{
                 xs: "center",
                 lg: "flex-start",
+                
               }}
+              paddingTop={6}
             >
               <Box position={"relative"} zIndex={1}>
                 <Box
@@ -257,7 +260,7 @@ export default function AboutUs() {
               </CTypography>
               <Box>
                 <CButton
-                  btnTitle={"Read More"}
+                  btnTitle={"Book Now"}
                   fontSize={{
                     md: 20,
                     xs: 16,

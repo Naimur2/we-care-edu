@@ -154,7 +154,7 @@ export default function Navbar() {
               <SunIcon iconColor={isDarkMode ? "#fff" : "#292D32"} />
             </IconButton>
             <CButton
-              btnTitle={"Book Now"}
+              btnTitle={"Login"}
               fontSize={{
                 xs: 12,
                 md: 14,
@@ -263,7 +263,7 @@ export default function Navbar() {
 
             <Box py={2}>
               <CButton
-                btnTitle={"Book Now"}
+                btnTitle={"Login"}
                 fontSize={{
                   xs: 12,
                   md: 14,

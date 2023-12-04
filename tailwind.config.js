@@ -6,7 +6,11 @@ module.exports = {
       fontFamily: {
         sans: ["Plus Jakarta Sans", "sans-serif"],
         serif: ["Helvetica Now Display", "serif"],
+        
       },
+      backgroundImage: {
+        line: "url('/public/line.svg')",
+      }
     },
   },
   plugins: [],
