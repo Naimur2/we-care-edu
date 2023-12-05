@@ -48,6 +48,18 @@ const locations = [
       lng: 85.31295,
     },
   },
+  {
+    id: 4,
+    title: "Korea branch",
+    name: "Yongso-Ro 7beon-Gil, Nam-Gu, Busan",
+    telephone: "+82 0104 824 8338",
+    email: "wecareeducation2145@gmail.com",
+    time: "Sun - Thu, 10 AM - 6PM",
+    location: {
+      lat: 35.136699,
+      lng: 129.100465,
+    },
+  },
 ];
 
 export default function ContactUs() {

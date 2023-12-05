@@ -42,10 +42,10 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Stack component={"main"} bgcolor={isDarkMode ? "#0D0D0D" : "#fff"}>
         <HomePage />
-        {/* <MessengerChat
-          pageId="109268111769502"
-          appId="109268111769502"
-          language="sv_SE"
+        <MessengerChat
+          pageId={process.env.REACT_APP_PAGE_ID}
+          appId={process.env.REACT_APP_FACEBOOK_APP_ID}
+          language="en_US"
           themeColor={"#000000"}
           bottomSpacing={300}
           loggedInGreeting="loggedInGreeting"
@@ -70,7 +70,7 @@ function App() {
           onMessengerLoad={() => {
             console.log("onMessengerLoad");
           }}
-        /> */}
+        />
       </Stack>
     </QueryClientProvider>
   );

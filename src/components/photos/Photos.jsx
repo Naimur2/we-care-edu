@@ -11,59 +11,57 @@ import { CTypography } from "../../utility";
 import { useSelector } from "react-redux";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { AnimatePresence, motion } from "framer-motion";
 
-const photos = [
-  {
-    _id: 1,
-    image: photo1,
-    category: 1,
-  },
-  {
-    _id: 2,
-    image: photo2,
-    category: 1,
-  },
-  {
-    _id: 3,
-    image: photo3,
-    category: 1,
-  },
-  {
-    _id: 4,
-    image: photo2,
-    category: 2,
-  },
-  {
-    _id: 5,
-    image: photo3,
-    category: 2,
-  },
-];
+const visaImages = Array.from({ length: 56 }).map((_, index) => ({
+  id: index + 1,
+  image: `/images/visa-success/${index + 1}.jpg`,
+  category: 1,
+}));
+const educationImages = Array.from({ length: 36 }).map((_, index) => ({
+  id: index + 1,
+  image: `/images/education/${index + 1}.jpg`,
+  category: 2,
+}));
+
+const photos = [...visaImages, ...educationImages];
 
 const category = [
   {
     _id: 1,
-    name: "Study",
+    name: "Visa Success",
   },
   {
     _id: 2,
-    name: "Job",
+    name: "Educational Images",
   },
 ];
 
+const totalPages = Math.ceil(photos.length / 6);
+const totalVisaPages = Math.ceil(visaImages.length / 6);
+const totalEducationPages = Math.ceil(educationImages.length / 6);
+
+const pages = {
+  1: totalVisaPages,
+  2: totalEducationPages,
+};
+
 export default function Photos() {
   const { isDarkMode } = useSelector((state) => state.darkMode);
+  const [numberOfPages, setNumberOfPages] = React.useState(totalPages);
 
   const backgroundColor = isDarkMode ? "#00A6C0" : "#0090A6";
   const color = !isDarkMode ? "#fff" : "#181818";
   const hoverBackgroundColor = isDarkMode ? "#00A6C0" : "#0090C0";
+
+  const [page, setPage] = React.useState(1);
 
   const [currentCategory, setCurrentCategory] = React.useState(null);
 
   const categoriesWithAll = [{ _id: null, name: "All" }, ...category];
 
   const categoryHandler = (id) => {
-    console.log(id)
+    console.log(id);
     setCurrentCategory(id);
   };
 
@@ -71,7 +69,37 @@ export default function Photos() {
     ? photos.filter((photo) => photo.category === currentCategory)
     : photos;
 
-    console.log(currentCategory)
+  const handleSeeMore = () => {
+    const photosDiv = document.getElementById("gphotos");
+    switch (currentCategory) {
+      case 1:
+        if (page < totalVisaPages) {
+          setPage(page + 1);
+        } else {
+          setPage(1);
+          photosDiv.scrollIntoView({ behavior: "smooth" });
+        }
+        break;
+      case 2:
+        if (page < totalEducationPages) {
+          setPage(page + 1);
+        } else {
+          setPage(1);
+          photosDiv.scrollIntoView({ behavior: "smooth" });
+        }
+        break;
+      default:
+        if (page < totalPages) {
+          setPage(page + 1);
+        } else {
+          setPage(1);
+          photosDiv.scrollIntoView({ behavior: "smooth" });
+        }
+        break;
+    }
+  };
+
+  const paginatedImages = filteredPhotos.slice(0, page * 6);
 
   return (
     <Stack
@@ -80,6 +108,7 @@ export default function Photos() {
       position={"relative"}
       zIndex={1}
       overflow={"hidden"}
+      id="gphotos"
     >
       {/* right color */}
       <Box
@@ -169,8 +198,6 @@ export default function Photos() {
         </Box>
       </Stack>
 
-
-
       <div className="container mx-auto px-4 grid gap-10">
         <div className="flex justify-center items-center flex-wrap gap-4">
           {categoriesWithAll.map((category) => (
@@ -178,6 +205,8 @@ export default function Photos() {
               key={category._id}
               onClick={() => {
                 categoryHandler(category?._id);
+                setPage(1);
+                setNumberOfPages(pages[category?._id] || totalPages);
               }}
               variant={
                 category?._id === currentCategory ? "contained" : "outlined"
@@ -190,9 +219,7 @@ export default function Photos() {
                     : "transparent",
                 borderColor: backgroundColor,
                 color:
-                  category?._id === currentCategory
-                    ? color
-                    : backgroundColor,
+                  category?._id === currentCategory ? color : backgroundColor,
                 "&:hover": {
                   bgcolor: hoverBackgroundColor,
                   color: color,
@@ -203,17 +230,43 @@ export default function Photos() {
             </Button>
           ))}
         </div>
-
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {filteredPhotos.map((photo) => (
-            <div className="h-[20rem] p-3 rounded-xl overflow-hidden">
-              <img
-                alt={"p"}
-                src={photo.image}
-                className="h-full w-full object-cover rounded-xl"
-              />
-            </div>
-          ))}
+        <AnimatePresence>
+          <motion.div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3" layout>
+            {paginatedImages.map((photo) => (
+              <motion.div
+                className="h-[20rem] p-3 rounded-xl overflow-hidden"
+                layout
+                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                exit={{ opacity: 0, scale: 0.5 }}
+              >
+                <img
+                  alt={"p"}
+                  src={photo.image}
+                  className="h-full w-full object-cover rounded-xl"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+        <div className="flex justify-center">
+          <Button
+            onClick={handleSeeMore}
+            variant={"contained"}
+            sx={{
+              borderRadius: "6px",
+              backgroundColor: backgroundColor,
+              color: color,
+              "&:hover": {
+                bgcolor: hoverBackgroundColor,
+                color: color,
+              },
+              px: 4,
+              py: 1.5,
+            }}
+          >
+            {numberOfPages > page ? "See More" : "See Less"}
+          </Button>
         </div>
       </div>
     </Stack>

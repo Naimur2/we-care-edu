@@ -180,7 +180,7 @@ export default function WorkingUniversities() {
             </div>
           ))}
         </Stack>
-        <Stack pt={2}>
+        {/* <Stack pt={2}>
           <CButton
             btnTitle={"See More"}
             fontSize={{
@@ -188,7 +188,7 @@ export default function WorkingUniversities() {
               xs: 16,
             }}
           />
-        </Stack>
+        </Stack> */}
       </Stack>
     </Stack>
   );
