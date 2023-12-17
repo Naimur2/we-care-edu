@@ -1,17 +1,10 @@
 import { Box, Button, Stack } from "@mui/material";
-import React from "react";
-import Slider from "react-slick";
-import line from "../../assets/images/line.svg";
-import photo1 from "../../assets/images/photos1.png";
-import photo2 from "../../assets/images/photos2.png";
-import photo3 from "../../assets/images/photos3.png";
-import ArrowLeft from "../../assets/svg/ArrowLeft";
-import ArrowRight from "../../assets/svg/ArrowRight";
-import { CTypography } from "../../utility";
-import { useSelector } from "react-redux";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { useSelector } from "react-redux";
+import line from "../../assets/images/line.svg";
+import { CTypography } from "../../utility";
 
 const visaImages = Array.from({ length: 56 }).map((_, index) => ({
   id: index + 1,

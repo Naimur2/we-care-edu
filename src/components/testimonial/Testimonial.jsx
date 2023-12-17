@@ -1,6 +1,5 @@
 import { Box, Stack } from "@mui/material";
 import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
@@ -13,15 +12,15 @@ import { CTypography } from "../../utility";
 const testimonial = [
   {
     id: 1,
-    name: "Asha Sarker",
-    image: "/images/testimonial/Picture1.jpg",
-    quote: `I am Asha Sarker. I recently got my Visa Approval for South Korea. Throughout the whole procedure WeCare Education helped me a lot. The student Counselors are super friendly . When I had some inquiry they helped me in a really friendly manner... It was a pleasant experience for me with WeCare Education. The adoration I got from Iftekhar Bhai is beyond expectation. Thank you WeCare Education for making my journey easier. `,
+    name: "Rafiqul islam",
+    image: "/images/testimonial/0.jpg",
+    quote: `Hello , This is Md Rafiqul Islam. First of all thanks to Almighty Allah, Family, friends, well wishers and last but not the least, special thanks goes to Md Iftekhar Rahman for his wonderful help and support in my journey towards South Korea. I hope and expect his endless and everlasting support on the days ahead. I pray for his healthy life and success in his goals. Thank you.`,
   },
   {
     id: 2,
-    name: "Chinmoy Dash Rahul",
-    image: "/images/testimonial/Picture2.jpg",
-    quote: `Many many thanks to WeCare Education❤️❤️ They really care about their students. They help their students to provide all the needed documents. Beside that they have hired some lovely people as student counselors. I think I have made the best decision by choosing WeCare Education. I will suggest every student who is planning to study in South Korea to choose "WeCare Education" because I think it is the best that you can get here❤️❤️ `,
+    name: "Kamrol Hasan",
+    image: "/images/testimonial/1.jpg",
+    quote: `Since the day one when I started my counseling with WE CARE, the overall journey of my admission as well visa process was enjoyable. The guidance and the road map shown by them during the process helped me a lot. The endless support  along with a perfect document list given by WE CARE helped me to get success for my visa approval. Thanks a lot to entire team.`,
   },
   {
     id: 3,
@@ -212,7 +211,13 @@ export default function Testimonial() {
         </Box>
       </Stack>
       <Stack gap={4}>
-        <Slider {...settings} ref={slider}>
+        <Slider
+          {...settings}
+          ref={slider}
+          autoplay={true}
+          autoplaySpeed={2000}
+          infinite={true}
+        >
           {testimonial.map((item, index) => (
             <Stack
               key={item.id}
@@ -332,7 +337,6 @@ export default function Testimonial() {
                         objectPosition: "center",
                         height: "100%",
                         width: "100%",
-                        
                       }}
                     />
                   </Box>

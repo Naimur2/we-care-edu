@@ -256,7 +256,14 @@ export default function Advisor() {
         </Box>
       </Stack>
       <Stack gap={4}>
-        <Slider {...settings} ref={slider}>
+        <Slider
+          {...settings}
+          ref={slider}
+          autoplay={true}
+          autoplaySpeed={2000}
+          infinite={true}
+        >
+          
           {testimonial.map((item) => (
             <AdvisorCard
               key={item.id}
