@@ -7,7 +7,7 @@ import { CTypography } from "../../utility";
 import cn from "../../utility/cn";
 import GMap from "./GMap";
 
-const locations = [
+export const locations = [
   {
     id: 1,
     title: "Dhaka Office",

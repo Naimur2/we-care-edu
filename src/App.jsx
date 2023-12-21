@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import "./App.css";
 import "./font.css";
 import HomePage from "./page/HomePage";
+import CustomerCare from "layout/CustomerCare";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +74,7 @@ function App() {
           }}
         />
       </Stack>
+      <CustomerCare />
     </QueryClientProvider>
   );
 }
