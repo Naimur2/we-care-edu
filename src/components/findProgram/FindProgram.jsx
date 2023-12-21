@@ -80,6 +80,7 @@ export default function FindProgram() {
                 overflow: "hidden",
                 pb: 8,
             }}
+            id="findProgram"
         >
             <Stack component={"div"} className="container">
                 <Stack

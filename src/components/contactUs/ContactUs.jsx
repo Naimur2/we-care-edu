@@ -1,13 +1,9 @@
-import { Box, Grid, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import React from "react";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { useSelector } from "react-redux";
-import contactUsImg from "../../assets/images/contactUsImg.png";
-import squreShape from "../../assets/images/squreShape.svg";
 import line from "../../assets/images/line.svg";
 import { CTypography } from "../../utility";
-import ContactUsForm from "../inputForm/ContactUsForm";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import cn from "../../utility/cn";
 import GMap from "./GMap";
 
@@ -80,6 +76,7 @@ export default function ContactUs() {
       zIndex={1}
       overflow={"hidden"}
       component={"section"}
+
     >
       <Stack component={"div"} className="container">
         <Stack

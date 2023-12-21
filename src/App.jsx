@@ -1,19 +1,19 @@
 import React from "react";
 // import { Counter } from './features/counter/Counter';
 import { Stack } from "@mui/material";
-import { useSelector } from "react-redux";
-import "./App.css";
-import "./font.css";
-import HomePage from "./page/HomePage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { MessengerChat } from "react-messenger-chat-plugin";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { useSelector } from "react-redux";
+import "./App.css";
+import "./font.css";
+import HomePage from "./page/HomePage";
 
 const queryClient = new QueryClient();
 
 function App() {
-  const { isDarkMode } = useSelector((state) => state.darkMode);
+  const { isDarkMode } = useSelector((state) => state?.darkMode);
 
   const [currentWindowWidth, setCurrentWindowWidth] = React.useState(
     window.innerWidth
@@ -39,6 +39,7 @@ function App() {
   }, []);
 
   return (
+
     <QueryClientProvider client={queryClient}>
       <Stack component={"main"} bgcolor={isDarkMode ? "#0D0D0D" : "#fff"}>
         <HomePage />

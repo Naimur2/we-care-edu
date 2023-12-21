@@ -1,14 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.a3f76782.css",
-    "main.js": "/static/js/main.5cb8df68.js",
+    "main.css": "/static/css/main.d69806c3.css",
+    "main.js": "/static/js/main.bf8254fc.js",
     "static/media/study.png": "/static/media/study.0ad99f7b2d9f372fbf1c.png",
+    "static/media/banner.svg": "/static/media/banner.12ea850f8cfbdf87c8a7605c9fb34e6f.svg",
     "static/media/contactUsImg.png": "/static/media/contactUsImg.5f5dd41562a5c0a54f48.png",
     "static/media/fingirPrint.svg": "/static/media/fingirPrint.eef4faf174a1b31bbd31654edde8f073.svg",
     "static/media/fingirPrint2.svg": "/static/media/fingirPrint2.7d68bc7ee6014b8755f9c3eb24103d0d.svg",
-    "static/media/photos2.png": "/static/media/photos2.ae9d471eb1e20d8df64c.png",
-    "static/media/photos3.png": "/static/media/photos3.06cba8c8bfdc0d109583.png",
-    "static/media/photos1.png": "/static/media/photos1.60048c38ebe9eac4e4fb.png",
     "static/media/aboutImg.png": "/static/media/aboutImg.59a1da00a025c59f8bec.png",
     "static/media/HelveticaNowDisplay-ExtLtIta.ttf": "/static/media/HelveticaNowDisplay-ExtLtIta.9f30143806ff098c3e79.ttf",
     "static/media/HelveticaNowDisplay-ThinIta.ttf": "/static/media/HelveticaNowDisplay-ThinIta.eeedf1e6337afe19db77.ttf",
@@ -34,6 +32,7 @@
     "static/media/university2.png": "/static/media/university2.2ab1cae220ce92e7e9ee.png",
     "static/media/university1.png": "/static/media/university1.f758d08cae8fe7ee927e.png",
     "static/media/flag6.svg": "/static/media/flag6.a0f463c56d939e71f671f2cd917dddaf.svg",
+    "static/media/stripe.svg": "/static/media/stripe.41771614e760af917a0b2b0ab3ca4f1d.svg",
     "static/media/squreShape.svg": "/static/media/squreShape.62404865ad43053420dc1325bfe31beb.svg",
     "static/media/arrowAbout.svg": "/static/media/arrowAbout.81964cc2854fcfc16bc1867350a9927a.svg",
     "static/media/arrowAboutMini.svg": "/static/media/arrowAboutMini.49d254ff6bfb5ae4d48847a1f998ca69.svg",
@@ -53,11 +52,11 @@
     "index.html": "/index.html",
     "static/media/close.svg": "/static/media/close.7ca7e5c5b6cda5b29d63fe742e721c37.svg",
     "static/media/line.svg": "/static/media/line.b2e59c14345c67abca6163c9e2f6c394.svg",
-    "main.a3f76782.css.map": "/static/css/main.a3f76782.css.map",
-    "main.5cb8df68.js.map": "/static/js/main.5cb8df68.js.map"
+    "main.d69806c3.css.map": "/static/css/main.d69806c3.css.map",
+    "main.bf8254fc.js.map": "/static/js/main.bf8254fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3f76782.css",
-    "static/js/main.5cb8df68.js"
+    "static/css/main.d69806c3.css",
+    "static/js/main.bf8254fc.js"
   ]
 }

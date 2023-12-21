@@ -2,97 +2,79 @@ import { Box, Button, Stack } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
 import line from "../../assets/images/line.svg";
 import { CTypography } from "../../utility";
+import { photosApiSlice, useGetPhotosQuery } from "../../store/apis/photosApi";
 
-const visaImages = Array.from({ length: 56 }).map((_, index) => ({
-  id: index + 1,
-  image: `/images/visa-success/${index + 1}.jpg`,
-  category: 1,
-}));
-const educationImages = Array.from({ length: 36 }).map((_, index) => ({
-  id: index + 1,
-  image: `/images/education/${index + 1}.jpg`,
-  category: 2,
-}));
-
-const photos = [...visaImages, ...educationImages];
-
-const category = [
+const categories = [
+  {
+    _id: 0,
+    name: "All",
+    value: undefined,
+  },
   {
     _id: 1,
     name: "Visa Success",
+    value: "visa",
   },
   {
     _id: 2,
     name: "Educational Images",
+    value: "education",
   },
 ];
 
-const totalPages = Math.ceil(photos.length / 6);
-const totalVisaPages = Math.ceil(visaImages.length / 6);
-const totalEducationPages = Math.ceil(educationImages.length / 6);
-
-const pages = {
-  1: totalVisaPages,
-  2: totalEducationPages,
-};
-
 export default function Photos() {
+  const [category, setCategory] = React.useState(undefined);
+  const dispatch = useDispatch();
+
+  const args = {
+    category: "photos",
+    subCategory: category ? category : undefined,
+    page: 1,
+    limit: 6,
+  };
+
+  
+
+
+  const { data } = useGetPhotosQuery(args, {
+    refetchOnMountOrArgChange: true,
+  });
+
   const { isDarkMode } = useSelector((state) => state.darkMode);
-  const [numberOfPages, setNumberOfPages] = React.useState(totalPages);
 
   const backgroundColor = isDarkMode ? "#00A6C0" : "#0090A6";
   const color = !isDarkMode ? "#fff" : "#181818";
   const hoverBackgroundColor = isDarkMode ? "#00A6C0" : "#0090C0";
 
-  const [page, setPage] = React.useState(1);
+  const handleSeeMore = async () => {
+    if (Number(data?.meta?.page) < Number(data?.meta?.maximumPage)) {
+      try {
+        const res = await dispatch(
+          photosApiSlice.endpoints.getMorePhotos.initiate({
+            category: "photos",
+            subCategory: category ? category : undefined,
+            page: Number(data?.meta?.page) + 1,
+            limit: 6,
+          })
+        ).unwrap();
 
-  const [currentCategory, setCurrentCategory] = React.useState(null);
-
-  const categoriesWithAll = [{ _id: null, name: "All" }, ...category];
-
-  const categoryHandler = (id) => {
-    console.log(id);
-    setCurrentCategory(id);
-  };
-
-  const filteredPhotos = currentCategory
-    ? photos.filter((photo) => photo.category === currentCategory)
-    : photos;
-
-  const handleSeeMore = () => {
-    const photosDiv = document.getElementById("gphotos");
-    switch (currentCategory) {
-      case 1:
-        if (page < totalVisaPages) {
-          setPage(page + 1);
-        } else {
-          setPage(1);
-          photosDiv.scrollIntoView({ behavior: "smooth" });
+        if (res) {
+          dispatch(
+            photosApiSlice.util.updateQueryData("getPhotos", args, (draft) => {
+              draft.data = [...draft.data, ...res.data];
+              draft.meta = res.meta;
+            })
+          );
         }
-        break;
-      case 2:
-        if (page < totalEducationPages) {
-          setPage(page + 1);
-        } else {
-          setPage(1);
-          photosDiv.scrollIntoView({ behavior: "smooth" });
-        }
-        break;
-      default:
-        if (page < totalPages) {
-          setPage(page + 1);
-        } else {
-          setPage(1);
-          photosDiv.scrollIntoView({ behavior: "smooth" });
-        }
-        break;
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
-
-  const paginatedImages = filteredPhotos.slice(0, page * 6);
 
   return (
     <Stack
@@ -193,49 +175,46 @@ export default function Photos() {
 
       <div className="container mx-auto px-4 grid gap-10">
         <div className="flex justify-center items-center flex-wrap gap-4">
-          {categoriesWithAll.map((category) => (
+          {categories.map((cat) => (
             <Button
-              key={category._id}
+              key={cat._id}
               onClick={() => {
-                categoryHandler(category?._id);
-                setPage(1);
-                setNumberOfPages(pages[category?._id] || totalPages);
+                setCategory(cat.value);
               }}
-              variant={
-                category?._id === currentCategory ? "contained" : "outlined"
-              }
+              variant={cat.value === category ? "contained" : "outlined"}
               sx={{
                 borderRadius: "6px",
                 backgroundColor:
-                  category?._id === currentCategory
-                    ? backgroundColor
-                    : "transparent",
+                  cat.value === category ? backgroundColor : "transparent",
                 borderColor: backgroundColor,
-                color:
-                  category?._id === currentCategory ? color : backgroundColor,
+                color: cat.value === category ? color : backgroundColor,
                 "&:hover": {
                   bgcolor: hoverBackgroundColor,
                   color: color,
                 },
               }}
             >
-              {category.name}
+              {cat.name}
             </Button>
           ))}
         </div>
         <AnimatePresence>
-          <motion.div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3" layout>
-            {paginatedImages.map((photo) => (
+          <motion.div
+            className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+            layout
+          >
+            {data?.data?.map((photo) => (
               <motion.div
                 className="h-[20rem] p-3 rounded-xl overflow-hidden"
                 layout
                 animate={{ opacity: 1, scale: 1 }}
                 initial={{ opacity: 0 }}
                 exit={{ opacity: 0, scale: 0.5 }}
+                key={photo._id}
               >
                 <img
                   alt={"p"}
-                  src={photo.image}
+                  src={photo.url}
                   className="h-full w-full object-cover rounded-xl"
                 />
               </motion.div>
@@ -258,7 +237,9 @@ export default function Photos() {
               py: 1.5,
             }}
           >
-            {numberOfPages > page ? "See More" : "See Less"}
+            {data?.meta?.page < data?.meta?.maximumPage
+              ? "See More"
+              : "See Less"}
           </Button>
         </div>
       </div>

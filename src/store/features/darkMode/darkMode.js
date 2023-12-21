@@ -12,5 +12,7 @@ const moodSlice = createSlice({
         }
     },
 });
-export default moodSlice.reducer;
+
+const filterSliceReducer = moodSlice.reducer;
+export default filterSliceReducer;
 export const { toggleDarkMode } = moodSlice.actions;

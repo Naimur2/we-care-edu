@@ -5,7 +5,7 @@ import line from "../../assets/images/line.svg";
 import logo from "../../assets/images/logo.png";
 import MenuIcon from "../../assets/svg/MenuIcon";
 import SunIcon from "../../assets/svg/SunIcon";
-import { toggleDarkMode } from "../../features/darkMode/darkMode";
+import { toggleDarkMode } from "../../store/features/darkMode/darkMode";
 import { CButton, CCollapse, CTypography } from "../../utility";
 const menu = [
   {

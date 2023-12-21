@@ -39,6 +39,7 @@ export default function Gallery() {
       overflow={"hidden"}
       component={"section"}
       py={8}
+      id="videos"
     >
       <Stack component={"div"} className="container">
         <Stack py={8} justifyContent={"center"} alignItems={"center"}>

@@ -55,7 +55,9 @@ export default function WorkingUniversities() {
   const { isDarkMode } = useSelector((state) => state.darkMode);
 
   return (
-    <Stack component={"section"}>
+    <Stack component={"section"}
+       id="workingUniversities"
+    >
       <Stack
         component={"div"}
         className="container"

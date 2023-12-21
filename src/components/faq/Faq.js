@@ -2,11 +2,10 @@ import { Box, Stack } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import line from "../../assets/images/line.svg";
-import ArrowRight from "../../assets/svg/ArrowRight";
+import Arrow from "../../assets/svg/Arrow";
 import MinusIcon from "../../assets/svg/MinusIcon";
 import PlusIcon from "../../assets/svg/PlusIcon";
 import { CButton, CCollapse, CTypography } from "../../utility";
-import Arrow from "../../assets/svg/Arrow";
 
 const questions = [
   {

@@ -18,11 +18,13 @@ import HeroCarousel from "../components/heroCarousel/HeroCarousel";
 import AdvisorCard from "../components/AdvisorCard/AdvisorCard";
 import Advisor from "../components/Advisor/Advisor";
 import CEOStatement from "../components/ceo-statement/CEOStatement";
+import Header from "layout/Header";
 
 export default function HomePage() {
   return (
     <Stack>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Header />
       {/* <HeroSection /> */}
       <HeroCarousel />
       <OurServices />
