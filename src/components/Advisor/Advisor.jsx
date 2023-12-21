@@ -3,10 +3,6 @@ import React from "react";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
-import photo1 from "../../assets/images/TestimonialImg1.png";
-import photo2 from "../../assets/images/TestimonialImg2.png";
-import photo3 from "../../assets/images/TestimonialImg3.png";
-import photo4 from "../../assets/images/TestimonialImg4.png";
 import line from "../../assets/images/line.svg";
 import ArrowLeft from "../../assets/svg/ArrowLeft";
 import ArrowRight from "../../assets/svg/ArrowRight";
@@ -17,7 +13,7 @@ const testimonial = [
   {
     id: 1,
     name: "Saadat Mahboob",
-    advisorImageUrl: "/images/advisor/Picture1.jpg",
+    advisorImageUrl: "/images/advisor/15.jpg",
     facebook: "https://www.facebook.com/cricketer.saadat.9?mibextid=ZbWKwL ",
     whatsApp: "8801757748977",
     description: `Introduction: I am Saadat Mahboob.I have 5 years of working experience.Currently working at Wecare Education as Student Counselor `,
@@ -28,22 +24,22 @@ const testimonial = [
     advisorImageUrl: "/images/advisor/Picture2.jpg",
     facebook: "https://www.facebook.com/shanta.akther.90663?mibextid=ZbWKwL ",
     whatsApp: "8801621480130",
-    description: `I'm Student Councelor of WeCare Education!`,
+    description: `Wecare has an inbuilt culture that brings out the best from you and that is what I appreciate the most about this organisation. Wecare takes care of me and it helps to think about your future as well. `,
   },
   {
     id: 3,
-    name: "Israt Jahan Ritu",
-    advisorImageUrl: "/images/advisor/Picture3.jpg",
+    name: "Ritu Jahan ",
+    advisorImageUrl: "/images/advisor/18.jpg",
     facebook: "https://www.facebook.com/ritu.ritujahan.3?mibextid=9R9pXO ",
     whatsApp: "8801904766087",
-    description: `Introduction:This is Ritu Jahan from wecare education. You can get help from wecare to fulfill  your abroad goal. `,
+    description: `This is Ritu Jahan student councelor from wecare education. Try hard success will come soon.`,
   },
   {
     id: 4,
     name: "Md Nabil Hossen",
     advisorImageUrl: "/images/advisor/Picture4.jpg",
-    facebook: "https://www.facebook.com/nabil.hasan.92167?mibextid=ZbWKwL ",
-    whatsApp: "8801734544028",
+    facebook: "https://www.facebook.com/ritu.ritujahan.3",
+    whatsApp: "8801904766087",
     description: `Myself Md Nabil Hossen. I'm student counsellor of WeCare education. I'm from Gazipur,Bangladesh `,
   },
   {
@@ -73,7 +69,55 @@ const testimonial = [
       "https://www.facebook.com/profile.php?id=100005271466385&mibextid=ZbWKwL ",
     whatsApp: "8801533124708",
     description:
-      "Myself Panna Chakma.I am from Khagrachhari, Chittagong divison.",
+      "Hello, This is Panna Chakma. One of the skilled Student Counselor at WeCare Education. With a commitment to student success, I will provide expert guidance for your educational journey. Thank you for reaching out.",
+  },
+  {
+    id: 8,
+    name: "NISHAT UR RAHMAN DURJOY",
+    advisorImageUrl: "/images/advisor/19.jpg",
+    facebook:
+      "https://www.facebook.com/radwan.ahamed.54?mibextid=ZbWKwL",
+    whatsApp: "8801762285326",
+    description:
+      `HELLO THERE! My name is Redoan Ahmed, and I am employed as a student counsellor at Wecare Education at the moment. My expertise in this field allows me to interact with students around-the-clock, assisting them in running their entire workflow more smoothly.`,
+  },
+  {
+    id: 9,
+    name: "Redoan Ahmed ",
+    advisorImageUrl: "/images/advisor/16.jpg",
+    facebook:
+      "https://www.facebook.com/Nishaturrahman2002?mibextid=kFxxJD",
+    whatsApp: "8801683306261",
+    description:
+      `Assalamu Alaikum I’m Nishat ur Rahman Durjoy Student Counselor of Wecare Education I studied from BGMU University of Fashion and Technology. Besides, I always treat students well and help them with correct information about South Korea visa processing.`,
+  },
+  {
+    id: 10,
+    name: "Maria Akter",
+    advisorImageUrl: "/images/advisor/17.jpg",
+    whatsApp: "8801309924046",
+    description:
+      `Wecare is never a one thing. Get the inside stories seen through the lenses of Wecare people. Being in Wecare is like high performing sailing team. Maria Akter- student Counsellor and Application Team.
+`,
+  },
+  {
+    id: 11,
+    name: "Mahfuzar Rahman",
+    advisorImageUrl: "/images/advisor/20.jpg",
+    whatsApp: "8801760975212",
+    facebook:"https://www.facebook.com/mahfuzar.rahman.3950",
+    description:
+      `As an Executive Officer, I have been working for Wecare Education since 2022. Its my great pleasure to work with some nice people of this institution who are supportive to each other & cooperative.
+`,
+  },
+  {
+    id: 12,
+    name: "Zinia Ibnat",
+    advisorImageUrl: "/images/advisor/21.jpg",
+    whatsApp: "8801749665641",
+    facebook:"https://www.facebook.com/ibnatzinia?mibextid=ZbWKwL",
+    description:
+      `Its an honor to work with WeCare Education. I like the environment of office and I'm very grateful for my very supportive teammates and colleagues. Hope I can contribute to this company with my best.`,
   },
 ];
 

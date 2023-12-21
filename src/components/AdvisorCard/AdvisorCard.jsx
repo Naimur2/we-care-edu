@@ -31,13 +31,13 @@ const AdvisorCard = ({
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <img
+          <LazyLoadImage
             src={advisorImageUrl}
             alt={"advisor"}
             effect="blur"
             width={"75px"}
             height={"75px"}
-            style={{ borderRadius: "8px" }}
+            className="rounded-full h-20 w-20 overflow-hidden object-center object-cover"
           />
 
           <Box>
@@ -46,7 +46,7 @@ const AdvisorCard = ({
                 fontSize: "24px",
                 fontWeight: 600,
                 lineHeight: "normal",
-                color: isDarkMode ? "#868686" : "#535353" 
+                color: isDarkMode ? "#868686" : "#535353"
               }}
             >
               {name}
@@ -59,7 +59,7 @@ const AdvisorCard = ({
                 marginTop: "8px",
               }}
             >
-              <Box
+              {facebook && <Box
                 href={facebook}
                 sx={{
                   padding: "8px",
@@ -80,7 +80,7 @@ const AdvisorCard = ({
                   width={"24px"}
                   height={"24px"}
                 />
-              </Box>
+              </Box>}
 
               <Box
                 href={`https://wa.me/${whatsapp}`}

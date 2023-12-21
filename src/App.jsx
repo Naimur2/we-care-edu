@@ -22,9 +22,9 @@ function App() {
   React.useEffect(() => {
     AOS.init({
       duration: 1000,
-      disable: "tablet",
+      disable: ()=> currentWindowWidth < 1024,
     });
-  }, []);
+  }, [currentWindowWidth]);
 
   React.useEffect(() => {
     const handleResize = () => {

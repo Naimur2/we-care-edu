@@ -83,7 +83,7 @@ export default function Header() {
             />
             <h4
               className={cn(
-                "hidden md:inline-block max-[40ch] font-bold text-xs sm:text-sm md:text-base max-w-[10ch] text-center",
+                "inline-block max-[40ch] font-bold text-xs sm:text-sm md:text-base max-w-[10ch] text-center",
                 {
                   "text-[#fff]": isDarkMode,
                   "text-[#181818]": !isDarkMode,

@@ -24,21 +24,84 @@ const testimonial = [
   },
   {
     id: 3,
-    name: "Alveer Hasan Abir",
-    image: "/images/testimonial/Picture3.jpg",
-    quote: `I am incredibly grateful and happy with the exceptional service provided by "Wecare Education"! They are a fantastic student consultancy that helped me secure my student visa for South Korea. Throughout the process, they were attentive, supportive, and guided me step-by-step, making it all stress-free. Thanks to their expertise and dedication. I wholeheartedly recommend "Wecare Education" to any student seeking assistance with studying abroad. They truly care about their clients and go above and beyond to make dreams come true! `,
+    name: "Mohammad saiful islam",
+    image: "/images/testimonial/2.jpg",
+    quote: `I had a fantastic experience with We Care Education as my consultancy for pursuing higher studies in South Korea. They guided me through the entire visa process, and I'm thoroughly satisfied with their excellent services. Their expertise and support made the journey smooth and stress-free. I highly recommend We Care Education to anyone seeking assistance for studying in South Korea. And once again thank you We Care Education and the honourable CEO of We Care Education MD Iftekher Rahman Vhaiya..`,
   },
   {
     id: 4,
-    name: "Tarekul Islam Monna",
-    image: "/images/testimonial/Picture4.jpg",
-    quote: `Alhamdulillah by the grace of Allah I got my Korean student visa.WeCare Education made my journey easier. They were all friendly and available at any time. Undoubtedly it can be said that WeCare Education is the best when it comes to Korean student visa. From my application till now I am receiving all kinds of support from WeCare Education. Thanks to my counselor Md Aashik bhai Grateful to Md Iftekhar Rahman bhai(CEO of WeCare Education). `,
+    name: "Shimanto Hasan",
+    image: "/images/testimonial/3.jpg",
+    quote: `I had an outstanding experience with We Care throughout my entire visa processing journey. Their consultant went above and beyond to provide exceptional support and guidance. From the initial consultation to the final approval, their expertise and professionalism were evident. They were always responsive, addressing all my queries promptly and ensuring a smooth process. Thanks to their dedication and knowledge, I now have my visa and can't thank them enough. I highly recommend We Care to anyone seeking visa assistance; they truly live up to their name, caring deeply about their clients' success.  Specially many many thanks to my counselor @Md Ashik bhaiya and of course our honorable CEO @MD Iftekhar Rahman bhaiya🧡
+`,
   },
   {
     id: 5,
-    name: " Masuduzzaman Kamrul",
-    image: "/images/testimonial/Picture5.jpg",
-    quote: `I am grateful to Wecare Education. My journey was a bit complicated but they made it easy. Their commitment and service is excellent. Special thanks to Md Ifthekar Rahman bhaiya and Ritu Apu. They helped me a lot throughout my journey. ❤️ in terms of higher study in Korea, Wecare is the best. I wish all the best to the whole wecare family. `,
+    name: "Saifur Rahman",
+    image: "/images/testimonial/4.jpg",
+    quote: `I was so nervous about the visa process, but wecare made it so easy. They were incredibly helpful and knowledgeable, and they answered all of my questions patiently. They guided me through the entire process step-by-step, and they made sure that I had everything I needed to submit a complete and accurate application I recommend wecare to anybody who is looking for a good consultant for s.korea study visa processing.
+`,
+  },
+  {
+    id: 6,
+    name: "Abdur Rahman Akash",
+    image: "/images/testimonial/5.jpg",
+    quote: `The journey with WeCare Education has been nothing short of incredible, culminating in the successful approval of my study permit visa. Throughout the entire procedure, the bond between us has grown stronger, and their outstanding track record speaks volumes, as not a single rejection has been witnessed in this semester.And Many many thanks My counsilor @Md. Ashikur Rahman vai. and of cource our honorable CEO MD Iftekhar Rahman Vai.
+`,
+  },
+  {
+    id: 7,
+    name: "Rhitil Akash",
+    image: "/images/testimonial/6.jpg",
+    quote: `It was a wonderful journey since the beginning and was smoother than I've imagined.We Care helped me sincerely in every step on achieving my desired goal.There were many people who helped me but I would like to mention our beloved Boss Md Iftekhar Rahman and my personal favourite Md Aashik bhai for guiding towards the right path.I am also grateful to my friend Raffy,Al Mamun and aowlad for being there for me.I recommend We Care to whoever is dreaming about studying in South Korea  period
+`,
+  },
+  {
+    id: 8,
+    name: "Kopil Acharjee",
+    image: "/images/testimonial/7.jpg",
+    quote: `WeCare Education is the best agency for South Korea student visa process. The key to their effectiveness is the professionalism and attention to every minute detail born out of their personal involvement. At WeCare customer service and satisfaction are on top priority. They make every area of the admission and visa application process seamless with their continuous support and involvement.`,
+  },
+  {
+    id: 9,
+    name: "Md Pappu Ahmed",
+    image: "/images/testimonial/8.jpg",
+    quote: `I think wecare is the best agency for South Korea student visa. There were many problems in my papers where I did not have confidence but wecare did.Thank you to every member of wecare. Especially,iftekar Bhaiya,Nabil Bhaiya,Mridul Bhaiya,Tamanna Apu,Sahina Apu And Smart Saadat Bhai.`,
+  },
+  {
+    id: 10,
+    name: "Ashikur Rahman",
+    image: "/images/testimonial/9.jpg",
+    quote: `At first thanks to almighty Allah & secondly thanks to we care education who prepare all the documents & keep me tension free during my visa processing time. I think we care education is best consultancy for south korea, they received my call even 12 am and they prove that they provide 24/7 service.Highly recommended those who are want to apply in south korea. A special thanks to my Counselor Md Nabil Hossain & Ceo of we care education Md Iftekhar Rahman.I am so greatfull to you brother.
+`,
+  },
+  {
+    id: 11,
+    name: "Mehedi Khan Raffy",
+    image: "/images/testimonial/10.jpg",
+    quote: `Assalamu alaikum, wecare is best Educational consultant so far I can assure that. we were four boys from Narsingdi ( Rhitil, Mamun and Juvayer). Since we completed our IELTS we approached to wecare education and they gave us their best. Currently we are enrolled at Tongmyong university Busan in Computer engineering. So far everything is good and I strongly recommend wecare education if you are interested studying in South Korea. They will provide everything from Start to end, for example offer letter to accomodations. So take a small nap and approach wecare education. Best of Luck and God bless you. 
+`,
+  },
+  {
+    id: 12,
+    name: "Ariful H Adnan",
+    image: "/images/testimonial/11.jpg",
+    quote: `Wecare education is such a outstanding consultancy Which will never disappoint you in any single steps to get student visa in South korea.They are highly supportive,cooperative and charismatic❤️ Make your dream feasible with Wecare education.
+`,
+  },
+  {
+    id: 14,
+    name: "Najim Reezu",
+    image: "/images/testimonial/13.jpg",
+    quote: `Highly recommended,not only because they are friendly but also they work very professionally.I can't ignore the fact that it was very cheap and less time consuming especially if you are from middle class family.The major problem of bank statement was solved within a glance in this conslutancy.If you are lucky finding this consultancy my only request will be don't waste time looking at other consultancies,just hop in and get your visa..Good luck folks.
+`,
+  },
+  {
+    id: 15,
+    name: "15.	Afsana Mim",
+    image: "/images/testimonial/14.jpg",
+    quote: `First of all thanks to almighty Allah swt . I just got South Korea student visa D-2-3( Masters program ). I had a great Experience with we care education consultancy Md iftheker Rahman and his team mate. They are so friendly and so concern about their student and they try their best of best to get the visa. Personally I highly recommend this consultancy for visa processing.
+`,
   },
 ];
 
@@ -233,7 +296,7 @@ export default function Testimonial() {
                 px: 2,
                 height: "100%",
               }}
-              // bgcolor={'#f00'}
+            // bgcolor={'#f00'}
             >
               <Stack
                 sx={{
@@ -242,8 +305,8 @@ export default function Testimonial() {
                     currentSlide === item.id
                       ? "none"
                       : isDarkMode
-                      ? "2px solid #3F3F3F"
-                      : "2px solid #CDCDCD",
+                        ? "2px solid #3F3F3F"
+                        : "2px solid #CDCDCD",
                   borderRadius: "16px",
                   boxShadow:
                     currentSlide === item.id &&
@@ -278,8 +341,8 @@ export default function Testimonial() {
                           ? "#141414"
                           : "#F3FCFD"
                         : isDarkMode
-                        ? "#1B1B1B"
-                        : "#F3FCFD"
+                          ? "#1B1B1B"
+                          : "#F3FCFD"
                     }
                   />
                 </Box>
@@ -295,8 +358,8 @@ export default function Testimonial() {
                         ? "#868686"
                         : "#535353"
                       : isDarkMode
-                      ? "#868686"
-                      : "#CDCDCD"
+                        ? "#868686"
+                        : "#CDCDCD"
                   }
                   fontStyle={"italic"}
                   fontWeight={400}
@@ -307,7 +370,7 @@ export default function Testimonial() {
                     lineClamp: 5,
                   }}
                   className="line-clamp-5"
-                  // align={'center'}
+                // align={'center'}
                 />
                 <Stack direction={"row"} spacing={2} alignItems={"center"}>
                   <Box

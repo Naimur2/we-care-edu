@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import line from "../../assets/images/line.svg";
 import { CTypography } from "../../utility";
 import { photosApiSlice, useGetPhotosQuery } from "../../store/apis/photosApi";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const categories = [
   {
@@ -212,7 +213,7 @@ export default function Photos() {
                 exit={{ opacity: 0, scale: 0.5 }}
                 key={photo._id}
               >
-                <img
+                <LazyLoadImage
                   alt={"p"}
                   src={photo.url}
                   className="h-full w-full object-cover rounded-xl"
