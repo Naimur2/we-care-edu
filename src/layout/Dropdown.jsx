@@ -16,8 +16,8 @@ export default function Dropdown({
       //   onMouseEnter={() => setIsMenuOpen?.(true)}
       //   onMouseLeave={() => setIsMenuOpen?.(false)}
       className={`relative cursor-pointer w-full`}
-      onMouseEnter={() => setIsMenuOpen?.(true)}
-      onMouseLeave={() => setIsMenuOpen?.(false)}
+      // onMouseEnter={() => setIsMenuOpen?.(true)}
+      // onMouseLeave={() => setIsMenuOpen?.(false)}
     >
       <div
         className={cn(
