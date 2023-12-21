@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 // import { Counter } from './features/counter/Counter';
 import { Stack } from "@mui/material";
 import AOS from "aos";
@@ -8,8 +8,11 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { useSelector } from "react-redux";
 import "./App.css";
 import "./font.css";
-import HomePage from "./page/HomePage";
+// import HomePage from "./page/HomePage";
 import CustomerCare from "layout/CustomerCare";
+import Loader from "layout/Loader";
+
+const HomePage = React.lazy(() => import("./page/HomePage"));
 
 const queryClient = new QueryClient();
 
@@ -23,7 +26,7 @@ function App() {
   React.useEffect(() => {
     AOS.init({
       duration: 1000,
-      disable: ()=> currentWindowWidth < 1024,
+      disable: () => currentWindowWidth < 1024,
     });
   }, [currentWindowWidth]);
 
@@ -43,7 +46,9 @@ function App() {
 
     <QueryClientProvider client={queryClient}>
       <Stack component={"main"} bgcolor={isDarkMode ? "#0D0D0D" : "#fff"}>
-        <HomePage />
+        <Suspense fallback={<Loader />}>
+          <HomePage />
+        </Suspense>
         <MessengerChat
           pageId={process.env.REACT_APP_PAGE_ID}
           appId={process.env.REACT_APP_FACEBOOK_APP_ID}
