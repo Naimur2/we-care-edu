@@ -28,8 +28,8 @@ export default function CustomerCare() {
             ref={ref}
         >
 
-            <ul className={cn("bg-white rounded-xl shadow-lg overflow-hidden max-h-0 transition-all duration-300 ease-in-out", {
-                'max-h-[1000rem]': isShow,
+            {isShow && <ul className={cn("bg-white rounded-xl shadow-lg overflow-hidden max-h-0 transition-all duration-300 ease-in-out ", {
+                'max-h-[1000rem] ': isShow,
                 'overflow-auto': isShow,
             })}>
 
@@ -53,7 +53,7 @@ export default function CustomerCare() {
                         </li>
                     ))
                 }
-            </ul>
+            </ul>}
 
 
             <button

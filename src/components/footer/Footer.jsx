@@ -45,7 +45,7 @@ export default function Footer() {
                 zIndex: 1,
                 mt: "17rem",
             }}
-            // className="container"
+        // className="container"
         >
             <Stack component={"div"} className="container">
                 <Subscribe isDarkMode={isDarkMode} />
@@ -117,8 +117,8 @@ export default function Footer() {
                                         selected === index
                                             ? "#fff"
                                             : isDarkMode
-                                            ? "#868686"
-                                            : "#808080"
+                                                ? "#868686"
+                                                : "#808080"
                                     }
                                     fontSize={16}
                                     fontWeight={600}
@@ -165,7 +165,9 @@ export default function Footer() {
                             fontWeight={400}
                             text={`${currentYear} WeCare Education, Inc. All rights reserved.`}
                         />
-                        <Stack direction={"row"} spacing={2}>
+                        <div
+                            className="flex gap-4 items-center"
+                        >
                             <a
                                 href="https://www.facebook.com/wecareeducationconsultant"
                                 target="_blank"
@@ -174,7 +176,7 @@ export default function Footer() {
                                 <img
                                     style={{ width: "32px", height: "32px" }}
                                     src="/images/icon/fb_icon.svg"
-                                    alt="youtube"
+                                    alt="facebook"
                                 />
                             </a>
 
@@ -189,7 +191,29 @@ export default function Footer() {
                                     alt="youtube"
                                 />
                             </a>
-                        </Stack>
+                            <a
+                                href="https://www.linkedin.com/in/md-iftekhar-rahman-2a5091297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    style={{ width: "32px", height: "32px" }}
+                                    src="/images/icon/linkedin.svg"
+                                    alt="linkedin"
+                                />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/wecare_education2145/?igshid=MTk0NTkyODZkYg%3D%3D&utm_source=qr"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    style={{ width: "32px", height: "32px" }}
+                                    src="/images/icon/instagram.svg"
+                                    alt="instagram"
+                                />
+                            </a>
+                        </div>
                     </Stack>
                 </Stack>
             </Stack>

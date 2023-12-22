@@ -28,7 +28,7 @@ export default function PersonalInfo() {
 
   return (
     <Modal isOpen={isOpen("PersonalInfo")} onClose={closeModal}>
-      <Modal.Content className="!rounded-xl !top-[4%] !max-w-2xl !py-8 !px-6">
+      <Modal.Content className="!rounded-xl !top-[4%] !max-w-2xl !py-8 !px-6 ">
         <CloseIcon
           onClick={closeModal}
           className="absolute top-4 right-4 cursor-pointer"
