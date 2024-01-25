@@ -9,6 +9,9 @@ import logo from "../../src/assets/images/logo.png";
 import { useSelector } from "react-redux";
 import { CButton } from "utility";
 
+import { FaInstagram } from "react-icons/fa";
+import { SlSocialFacebook, SlSocialLinkedin } from "react-icons/sl";
+
 const links = [
   {
     id: "1",
@@ -65,10 +68,7 @@ export default function Header() {
     <>
       <header className={`bg-white py-3 md:py-4 px-4 sticky top-0 z-[1000]`}>
         <div className="container mx-auto grid grid-cols-2 justify-between md:grid-cols-[auto,1fr] md:gap-4 md:pl-8">
-          <a
-            href="/"
-            className={`flex justify-start items-center `}
-          >
+          <a href="/" className={`flex justify-start items-center `}>
             <img
               component={"img"}
               src={logo}
@@ -93,12 +93,17 @@ export default function Header() {
               WeCare Education
             </h4>
           </a>
-          <div className={cn("flex flex-col md:flex-row justify-center md:justify-between items-center row-start-2 col-span-2 md:row-start-1 md:col-start-2 max-h-0 overflow-hidden md:!overflow-visible  md:!max-h-none", {
-            "max-h-[10030rem]  pt-5 md:pt-0": isMenuOpen,
-          })}>
+          <div
+            className={cn(
+              "flex flex-col md:flex-row justify-center md:justify-between items-center row-start-2 col-span-2 md:row-start-1 md:col-start-2 max-h-0 overflow-hidden md:!overflow-visible  md:!max-h-none",
+              {
+                "max-h-[10030rem]  pt-5 md:pt-0": isMenuOpen,
+              }
+            )}
+          >
             <ul
               className={cn(
-                `w-full md:w-auto md:grid md:grid-cols-4 md:place-items-center md:justify-center md:!overflow-visible transition-all duration-300 ease-out md:items-center gap-4`,
+                `w-full md:w-auto md:grid md:grid-cols-4 md:place-items-center md:justify-center md:!overflow-visible transition-all duration-300 ease-out md:items-center gap-4`
               )}
               ref={dropdownRef}
             >
@@ -140,29 +145,33 @@ export default function Header() {
                 target="_blank"
               />
 
-              <a href="https://www.instagram.com/wecare_education2145/?igshid=MTk0NTkyODZkYg%3D%3D&utm_source=qr"
+              <a
+                href="https://www.instagram.com/wecare_education2145/?igshid=MTk0NTkyODZkYg%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noreferrer"
+                className="block bg-[#CFF9FF] py-2 px-[0.625rem] rounded-md hover:bg-[#75b1c9] [&>*]:hover:text-[#f6feff] transition-all duration-100 ease-out"
               >
-
-                <img src="/icons/instagram.svg" alt=""
-                  className="h-8 md:h-10  w-8 md:w-10 "
-                />
+                <FaInstagram className="h-4 md:h-7  w-4 md:w-7 text-[#0090A6] transition-all duration-100 ease-out" />
               </a>
-              <a href="https://www.facebook.com/wecareeducationconsultant"
+
+              <a
+                href="https://www.facebook.com/wecareeducationconsultant"
                 target="_blank"
                 rel="noreferrer"
+                className="block bg-[#CFF9FF] py-2 px-[0.625rem] rounded-md hover:bg-[#75b1c9] [&>*]:hover:text-[#f6feff] transition-all duration-100 ease-out"
               >
-                <img src="/icons/facebook.svg" alt="" className="h-8 md:h-10  w-8 md:w-10 " />
+                <SlSocialFacebook className="h-4 md:h-7  w-4 md:w-7 text-[#0090A6] transition-all duration-100 ease-out" />
               </a>
 
-              <a href="https://www.linkedin.com/in/md-iftekhar-rahman-2a5091297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              <a
+                href="https://www.linkedin.com/in/md-iftekhar-rahman-2a5091297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                 target="_blank"
                 rel="noreferrer"
+                className="block bg-[#CFF9FF] py-2 px-[0.625rem] rounded-md hover:bg-[#75b1c9] [&>*]:hover:text-[#f6feff] transition-all duration-100 ease-out"
               >
-                <img src="/icons/linkedin.svg" alt="" className="h-8 md:h-10  w-8 md:w-10 " />
+                <SlSocialLinkedin className="h-4 md:h-7  w-4 md:w-7 text-[#0090A6] transition-all duration-100 ease-out" />
               </a>
-
+            
             </div>
           </div>
           <div className="md:hidden flex justify-end">

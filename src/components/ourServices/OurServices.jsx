@@ -2,100 +2,128 @@ import { Box, Stack } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import line from "../../assets/images/line.svg";
-import Service1 from "../../assets/svg/Service1";
-import Service2 from "../../assets/svg/Service2";
-import Service3 from "../../assets/svg/Service3";
-import Service4 from "../../assets/svg/Service4";
-import Service5 from "../../assets/svg/Service5";
-import Service6 from "../../assets/svg/Service6";
 import { CButton, CTypography } from "../../utility";
+import useModal from "../../modal/hook/useModal";
 
+const services = [
+    {
+        id: 1,
+        title: "Free file assessment",
+        icon: "/images/icon/services/1.svg",
+        content: `<p>
+            When it comes to assessing files for taking university admission it becomes quite concerning. In one hand, it is not an easy step to assess an applicant’s files and apply to a subject randomly, on the other hand it is quite tricky to choose a major as English track majors are hardly available in South Korean Universities.
+            But, our counsellors are expert in South Korean universities and therefore can distinguish what major to choose for you. After checking you academic (SSC, HSC/Diploma & Bachelor) score and also your study background, we can most accurately tell you which subject you should apply to which university.
+            Now the question may arise why is it important to assess file for University admission? Well, the answer is “Assessing files helps you to find right major and right University for you, and later it helps getting university admission and also getting a study visa. Choosing a major or choosing a university in a unprofessional way may lead to failure of your admission and also refusal of your visa application.
+            And here is WeCare Education, our dedicated and expert counsellor’s help you assess your files for completely free and with most efficiency
+        </p>.
+`
+    },
+    {
+        id: 2,
+        title: "Choosing a right major",
+        icon: "/images/icon/services/2.svg",
+        content: `<p>
+            Choosing a right major and Choosing a right University is a high intensity affair simply because the University you are targeting may not have the major your expect to study. On the other hand, the major you expect to study may not offer in English track. And this is why it sometimes become a mind-stressing game. 
+            WeCare Education is right there for you to choose you your target major from a wide range of University all over South Korea. And this is one of the great strength WeCare Education has.
+        </p>
+`
+    },
+    {
+        id: 3,
+        title: "24 hours counselling",
+        icon: "/images/icon/services/3.svg",
+        content: `<p>If you ask why WeCare Education is a beautiful organization, the answer would be our “counselling pattern” for our applicants. It means, we are not getting you left behind for an hour. It simply means, we are always available to answers your question, to hear your concerns and fix any problem. Our counsellors remain available during the day and throughout out night just to ensure you are getting all of solutions you need. You can get answer of your question and discuss with us by visiting our office or online. We provide both of the services for your convenience.</p>`
+    },
+    {
+        id: 4,
+        title: "Error free Application",
+        icon: "/images/icon/services/4.svg",
+        content: `<p>Online Application is one of the first and an important step to begin with. And especially in South Korean university application portals, application is quite complex and confusing as the websites are entirely in Korean language. But our application team is advanced and most experienced so that they can do application in a very perfect way without any single errors. It ensures all the information is relevant and correct, writing your SOP and uploading your documents. All is done in order and errorless.</p>`
+    },
+    {
+        id: 5,
+        title: "Interview Preparation",
+        icon: "/images/icon/services/5.svg",
+        content: `It is the most important part in getting admission to your dream University. Whatsoever you academic result and others are, if you cannot perform well in the University interview you cannot qualify for the admission. In university interview, there are some formalities, behavioral marks, presentation styles, talking styles, questions and answers. If you unfortunately miss one of them, it may lead to refusal of your admission. And that is why “performing good” in the university interview can be called “gateway to the University”. Our counsellors fully help you in interview preparation and make sure until you are confident enough to face the University interview.`
+    },
+    {
+        id: 6,
+        title: "5 Trial Interview",
+        icon: "/images/icon/services/6.svg",
+        content: `<p class="mb-4">We conduct 4-5 trial interviews in order to make our students perfectly ready for the university final interview. During this trial interview we teach our students every single details such as. </p>
+<ul class="!list-disc !list-inside marker:bg-slate-500">
+    <li>Everything about zoom/skype.</li>
+    <li>How to write your name and application ID on ZOOM/SKYPE. </li>
+    <li>What dress to wear?</li>
+    <li>How to stand in front of the camera.</li>
+    <li>We guide you about the possible question and how to answer them.</li>
+    <li>We will guide you about the different question parent for different majors and different universities.</li>
+    <li>We guide you how to handle an unexpected or difficult question and how to handle the situation.</li>
+</ul>
+
+<p>This trial interviews are to make you most know about the overall interview environment so that you can feel confident in your main interview and give your best.</p>
+`
+    },
+    {
+        id: 7,
+        title: "Cover letter & SOP",
+        icon: "/images/icon/services/7.svg",
+    },
+    {
+        id: 8,
+        title: "Visa Documents Preparation",
+        icon: "/images/icon/services/8.svg",
+        content: `<p>It is the final step and the most crucial step whether will you get visa or not. Wecare Education is the best of all in this case, specifically telling, we include some additional documents to your visa application that makes your visa file really worthy and reasonable.  We guide, write, revise, correct the cover letter, visa form fill-up and so on. Finally our expert counselor check each of the document one by one and ensure it is 100% error free.</p>`
+    },
+    {
+        id: 9,
+        title: "Tax & TIN Registration",
+        icon: "/images/icon/services/9.svg",
+    },
+    {
+        id: 10,
+        title: "Bank Balance Guidance",
+        icon: "/images/icon/services/10.svg",
+    },
+    {
+        id: 11,
+        title: "Embassy Date Reservation",
+        icon: "/images/icon/services/11.svg",
+    },
+    {
+        id: 12,
+        title: "Tuition Refund",
+        icon: "/images/icon/services/12.svg",
+    },
+    {
+        id: 13,
+        title: "Air Ticket Reservation",
+        icon: "/images/icon/services/13.svg",
+        content: `<p>As soon as our students get visa approval, we do purchase air ticket for them. And also we guide them about what to take with them and some financial/currency issues.</p>`
+    },
+    {
+        id: 14,
+        title: "Dormitory",
+        icon: "/images/icon/services/14.svg",
+        content: `<p>We arrange meetings with our student as soon as they come in Korea and discuss with them some fundamental issues such as things not to do in Korea and things what Korean like and dislike. We also arrange Dormitory/ living space for our students. And finally, we give them job guidance & reference such as how to apply for a job, what is job requirement and where can you get a job. After all, you should be aware of that getting a job in South Korea may take 1 to 3 month after arrival in Korea, as a new students in a new country & culture you should have patience in getting a job. So it is advised that you should take some money from Bangladesh for your better movement.</p>`
+    },
+    {
+        id: 15,
+        title: "Job Guidelines",
+        icon: "/images/icon/services/15.svg",
+    },
+    {
+        id: 16,
+        title: "Korean Culture & Basics",
+        icon: "/images/icon/services/16.svg",
+    },
+];
 export default function OurServices() {
     const { isDarkMode } = useSelector((state) => state.darkMode);
     const [seletedService, setSeletedService] = React.useState(0);
     const [dataCount, setDataCount] = React.useState(6);
-    const services = [
-        {
-            id: 1,
-            title: "Free file assessment",
-            icon: "/images/icon/services/1.svg",
-        },
-        {
-            id: 2,
-            title: "Choosing a right major",
-            icon: "/images/icon/services/2.svg",
-        },
-        {
-            id: 3,
-            title: "24 hours counselling",
-            icon: "/images/icon/services/3.svg",
-        },
-        {
-            id: 4,
-            title: "Error free Application",
-            icon: "/images/icon/services/4.svg",
-        },
-        {
-            id: 5,
-            title: "Interview Preparation",
-            icon: "/images/icon/services/5.svg",
-        },
-        {
-            id: 6,
-            title: "5 Trial Interview",
-            icon: "/images/icon/services/6.svg",
-        },
-        {
-            id: 7,
-            title: "Cover letter & SOP",
-            icon: "/images/icon/services/7.svg",
-        },
-        {
-            id: 8,
-            title: "Visa Documents Preparation",
-            icon: "/images/icon/services/8.svg",
-        },
-        {
-            id: 9,
-            title: "Tax & TIN Registration",
-            icon: "/images/icon/services/9.svg",
-        },
-        {
-            id: 10,
-            title: "Bank Balance Guidance",
-            icon: "/images/icon/services/10.svg",
-        },
-        {
-            id: 11,
-            title: "Embassy Date Reservation",
-            icon: "/images/icon/services/11.svg",
-        },
-        {
-            id: 12,
-            title: "Tuition Refund",
-            icon: "/images/icon/services/12.svg",
-        },
-        {
-            id: 13,
-            title: "Air Ticket Reservation",
-            icon: "/images/icon/services/13.svg",
-        },
-        {
-            id: 14,
-            title: "Dormitory",
-            icon: "/images/icon/services/14.svg",
-        },
-        {
-            id: 15,
-            title: "Job Guidelines",
-            icon: "/images/icon/services/15.svg",
-        },
-        {
-            id: 16,
-            title: "Korean Culture & Basics",
-            icon: "/images/icon/services/16.svg",
-        },
-    ];
+
+    const { openModal } = useModal()
 
     const handleSeeMoreOrLess = () => {
         if (services?.length !== dataCount) {
@@ -195,6 +223,14 @@ export default function OurServices() {
                                 width: "100%",
                                 height: "100%",
                             }}
+                            onClick={() => {
+                                if (item.content) {
+                                    openModal("ServiceDetails", {
+                                        title: item.title,
+                                        description: item.content,
+                                    });
+                                }
+                            }}
                         >
                             <Stack
                                 width={"100%"}
@@ -259,7 +295,7 @@ export default function OurServices() {
                                                 justifyContent: "center",
                                                 alignItems: "center",
                                             }}
-                                            // alt=""
+                                        // alt=""
                                         >
                                             {/* {item.icon} */}
                                             <Box

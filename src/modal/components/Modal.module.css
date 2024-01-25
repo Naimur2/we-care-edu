@@ -25,6 +25,8 @@
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  max-height: 80vh;
+  overflow: scroll;
 }
 
 .modal-content::-webkit-scrollbar {
