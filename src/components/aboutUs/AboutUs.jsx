@@ -9,10 +9,12 @@ import line from "../../assets/images/line.svg";
 import { CButton, CTypography } from "../../utility";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import useModal from "../../modal/hook/useModal";
+
 
 export default function AboutUs() {
   const { isDarkMode } = useSelector((state) => state.darkMode);
-
+  const { openModal } = useModal();
   return (
     <Stack
       py={{
@@ -265,6 +267,7 @@ export default function AboutUs() {
                     md: 20,
                     xs: 16,
                   }}
+                  onClick={() => openModal("PersonalInfo")}
                 />
               </Box>
             </Box>
