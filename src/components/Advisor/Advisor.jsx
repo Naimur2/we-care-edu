@@ -35,23 +35,6 @@ const testimonial = [
     description: `This is Ritu Jahan student councelor from wecare education. Try hard success will come soon.`,
   },
   {
-    id: 4,
-    name: "Md Nabil Hossen",
-    advisorImageUrl: "/images/advisor/Picture4.jpg",
-    facebook: "https://www.facebook.com/ritu.ritujahan.3",
-    whatsApp: "8801904766087",
-    description: `Myself Md Nabil Hossen. I'm student counsellor of WeCare education. I'm from Gazipur,Bangladesh `,
-  },
-  {
-    id: 5,
-    name: "Tamanna Hossain",
-    advisorImageUrl: "/images/advisor/Picture5.jpg",
-    facebook:
-      "https://www.facebook.com/profile.php?id=100004708244828&mibextid=LQQJ4d ",
-    whatsApp: "8801630689687",
-    description: `It’s my pleasure to introduce myself. This is Tamanna Hossain, Student Counselor of Wecare Education. My ethic is “ I never neglect an opportunity for my improvement.`,
-  },
-  {
     id: 6,
     name: "Salman Shakil",
     advisorImageUrl: "/images/advisor/Picture6.jpg",
@@ -98,16 +81,6 @@ const testimonial = [
     whatsApp: "8801309924046",
     description:
       `Wecare is never a one thing. Get the inside stories seen through the lenses of Wecare people. Being in Wecare is like high performing sailing team. Maria Akter- student Counsellor and Application Team.
-`,
-  },
-  {
-    id: 11,
-    name: "Mahfuzar Rahman",
-    advisorImageUrl: "/images/advisor/20.jpg",
-    whatsApp: "8801760975212",
-    facebook:"https://www.facebook.com/mahfuzar.rahman.3950",
-    description:
-      `As an Executive Officer, I have been working for Wecare Education since 2022. Its my great pleasure to work with some nice people of this institution who are supportive to each other & cooperative.
 `,
   },
   {
