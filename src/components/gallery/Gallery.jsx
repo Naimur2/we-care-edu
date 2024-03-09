@@ -1,30 +1,25 @@
 import { Box, Button, Stack } from "@mui/material";
 import React from "react";
+import { useQuery } from "react-query";
 import { useSelector } from "react-redux";
+import { getCategories, getVideos } from "../../api/videos";
 import line from "../../assets/images/line.svg";
 import { CButton, CTypography } from "../../utility";
-import { useQuery } from "react-query";
-import { getCategories, getVideos } from "../../api/videos";
 
 export default function Gallery() {
   const [category, setCategory] = React.useState(undefined);
   const { isDarkMode } = useSelector((state) => state.darkMode);
-  const { data, error, isLoading } = useQuery("categories", getCategories);
-  const [page, setPage] = React.useState(1);
+  const { data } = useQuery("categories", getCategories);
+  const [page] = React.useState(1);
   const [limit, setLimit] = React.useState(4);
 
-  const {
-    data: videos,
-    error: videoError,
-    isLoading: videoLoading,
-  } = useQuery(["videos", category, page, limit], () =>
+  const { data: videos } = useQuery(["videos", category, page, limit], () =>
     getVideos({ category, page, limit })
   );
 
   const backgroundColor = isDarkMode ? "#00A6C0" : "#0090A6";
   const color = !isDarkMode ? "#fff" : "#181818";
   const hoverBackgroundColor = isDarkMode ? "#00A6C0" : "#0090C0";
-
 
   const handleSeeMore = () => {
     if (videos?.meta?.page < videos?.meta?.totalPages) {
@@ -159,7 +154,6 @@ export default function Gallery() {
                   alignItems: "center",
                 }}
                 gap={"2rem"}
-                
               >
                 <Box
                   key={item.id}

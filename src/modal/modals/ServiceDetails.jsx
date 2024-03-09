@@ -3,7 +3,7 @@ import Modal from "../components/Modal";
 import useModal from "../hook/useModal";
 
 export default function ServiceDetails() {
-  const { closeModal, isOpen, openModal, modal } = useModal();
+  const { closeModal, isOpen, modal } = useModal();
 
   console.log(modal?.props?.description)
 

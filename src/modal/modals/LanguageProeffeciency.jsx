@@ -10,7 +10,7 @@ import MySwal from "utility/myswal";
 import axios from "axios";
 
 export default function LanguageProeffeciency() {
-  const { closeModal, isOpen, openModal, modal } = useModal();
+  const { closeModal, isOpen, modal } = useModal();
 
   const formik = useFormik({
     initialValues: {

@@ -58,29 +58,24 @@ const testimonial = [
     id: 8,
     name: "NISHAT UR RAHMAN DURJOY",
     advisorImageUrl: "/images/advisor/19.jpg",
-    facebook:
-      "https://www.facebook.com/radwan.ahamed.54?mibextid=ZbWKwL",
+    facebook: "https://www.facebook.com/radwan.ahamed.54?mibextid=ZbWKwL",
     whatsApp: "8801762285326",
-    description:
-      `HELLO THERE! My name is Redoan Ahmed, and I am employed as a student counsellor at Wecare Education at the moment. My expertise in this field allows me to interact with students around-the-clock, assisting them in running their entire workflow more smoothly.`,
+    description: `HELLO THERE! My name is Redoan Ahmed, and I am employed as a student counsellor at Wecare Education at the moment. My expertise in this field allows me to interact with students around-the-clock, assisting them in running their entire workflow more smoothly.`,
   },
   {
     id: 9,
     name: "Redoan Ahmed ",
     advisorImageUrl: "/images/advisor/16.jpg",
-    facebook:
-      "https://www.facebook.com/Nishaturrahman2002?mibextid=kFxxJD",
+    facebook: "https://www.facebook.com/Nishaturrahman2002?mibextid=kFxxJD",
     whatsApp: "8801683306261",
-    description:
-      `Assalamu Alaikum I’m Nishat ur Rahman Durjoy Student Counselor of Wecare Education I studied from BGMU University of Fashion and Technology. Besides, I always treat students well and help them with correct information about South Korea visa processing.`,
+    description: `Assalamu Alaikum I’m Nishat ur Rahman Durjoy Student Counselor of Wecare Education I studied from BGMU University of Fashion and Technology. Besides, I always treat students well and help them with correct information about South Korea visa processing.`,
   },
   {
     id: 10,
     name: "Maria Akter",
     advisorImageUrl: "/images/advisor/17.jpg",
     whatsApp: "8801309924046",
-    description:
-      `Wecare is never a one thing. Get the inside stories seen through the lenses of Wecare people. Being in Wecare is like high performing sailing team. Maria Akter- student Counsellor and Application Team.
+    description: `Wecare is never a one thing. Get the inside stories seen through the lenses of Wecare people. Being in Wecare is like high performing sailing team. Maria Akter- student Counsellor and Application Team.
 `,
   },
   {
@@ -88,25 +83,14 @@ const testimonial = [
     name: "Zinia Ibnat",
     advisorImageUrl: "/images/advisor/21.jpg",
     whatsApp: "8801749665641",
-    facebook:"https://www.facebook.com/ibnatzinia?mibextid=ZbWKwL",
-    description:
-      `Its an honor to work with WeCare Education. I like the environment of office and I'm very grateful for my very supportive teammates and colleagues. Hope I can contribute to this company with my best.`,
+    facebook: "https://www.facebook.com/ibnatzinia?mibextid=ZbWKwL",
+    description: `Its an honor to work with WeCare Education. I like the environment of office and I'm very grateful for my very supportive teammates and colleagues. Hope I can contribute to this company with my best.`,
   },
 ];
 
 export default function Advisor() {
   const { isDarkMode } = useSelector((state) => state.darkMode);
   const slider = React.useRef(null);
-  const width = window.innerWidth;
-  const [currentSlide, setCurrentSlide] = React.useState(0);
-
-  React.useEffect(() => {
-    if (width < 600) {
-      setCurrentSlide(1);
-    } else {
-      setCurrentSlide(2);
-    }
-  }, [width]);
 
   const settings = {
     className: "center",
@@ -162,15 +146,6 @@ export default function Advisor() {
         },
       },
     ],
-    beforeChange: (oldIndex, newIndex) => {
-      if (width < 600) {
-        setCurrentSlide(newIndex + 1);
-      } else {
-        if (newIndex === testimonial.length - 1) setCurrentSlide(1);
-        //   else if (newIndex === testimonial.length + 1) setCurrentSlide(2)
-        else setCurrentSlide(newIndex + 2);
-      }
-    },
   };
 
   return (
@@ -280,7 +255,6 @@ export default function Advisor() {
           autoplaySpeed={2000}
           infinite={true}
         >
-          
           {testimonial.map((item) => (
             <AdvisorCard
               key={item.id}

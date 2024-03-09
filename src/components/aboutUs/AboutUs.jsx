@@ -1,15 +1,12 @@
 import { Box, Stack } from "@mui/material";
-import React from "react";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { useSelector } from "react-redux";
 import aboutImg from "../../assets/images/aboutImg.png";
 import arrowAbout from "../../assets/images/arrowAbout.svg";
-import arrowAboutMini from "../../assets/images/arrowAboutMini.svg";
-import squreShape from "../../assets/images/squreShape.svg";
 import line from "../../assets/images/line.svg";
-import { CButton, CTypography } from "../../utility";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import squreShape from "../../assets/images/squreShape.svg";
 import useModal from "../../modal/hook/useModal";
+import { CButton, CTypography } from "../../utility";
 
 
 export default function AboutUs() {

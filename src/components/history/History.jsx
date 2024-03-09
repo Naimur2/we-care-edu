@@ -1,5 +1,4 @@
 import { Box, Stack } from "@mui/material";
-import React from "react";
 import { useSelector } from "react-redux";
 import arrowHistory from "../../assets/images/arrowHistory.svg";
 import flag1 from "../../assets/images/flag1.png";
@@ -8,7 +7,6 @@ import flag3 from "../../assets/images/flag3.png";
 import flag4 from "../../assets/images/flag4.png";
 import flag5 from "../../assets/images/flag5.svg";
 import flag6 from "../../assets/images/flag6.svg";
-import line from "../../assets/images/line.svg";
 import { CTypography } from "../../utility";
 
 const countries = [

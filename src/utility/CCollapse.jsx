@@ -1,5 +1,4 @@
-import { Collapse, Paper } from "@mui/material";
-import React from "react";
+import { Collapse } from "@mui/material";
 
 const CCollapse = ({ children, sx, ...rest }) => {
 	return (

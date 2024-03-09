@@ -2,12 +2,8 @@ import { Box, Stack } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import logo from "../../assets/images/logo.png";
-import FacebookIcon from "../../assets/svg/FacebookIcon";
-import LinkdinIcon from "../../assets/svg/LinkdinIcon";
-import TwitterIcon from "../../assets/svg/TwitterIcon";
 import { CTypography } from "../../utility";
 import Subscribe from "../subscribe/Subscribe";
-import YoutubeIcon from "../../assets/svg/YoutubeIcon";
 const link = [
     {
         id: 1,

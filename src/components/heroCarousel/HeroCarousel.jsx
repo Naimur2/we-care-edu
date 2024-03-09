@@ -1,11 +1,10 @@
 import { Box } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import useModal from "../../modal/hook/useModal";
 import ContainedButtons from "../../utility/CButton";
 import "./herocarousel.css";
 import images from "./images.json";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import useModal from "../../modal/hook/useModal";
 
 const HeroCarousel = () => {
   const { openModal } = useModal();
